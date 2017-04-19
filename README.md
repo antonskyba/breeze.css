@@ -1,4 +1,6 @@
 # Breeze.css
+_Framework that inspires on writing better CSS_
+
 
 ## About
 
