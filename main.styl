@@ -1,0 +1,186 @@
+/* ========================================================================== *
+ *                                                                            *
+ *                                 BREEZE.CSS                                 *
+ *                                                                            *
+ * ========================================================================== */
+
+/*
+ * Breeze.css, by @antonskyba
+ * Lightweight, scalable, Stylus-based framework for medium and large projects.
+ *
+ * github.com/antonskyba/Breeze.css
+ */
+
+
+
+
+
+/* CONTENTS
+ * ========================================================================== */
+
+/*
+ * SETTINGS
+ * Ratio................Ratios that can be used to produce spacing values.
+ * Core.................Most important setup variables, such as Base Unit and
+ *                      Base Ratio.
+ * Palette..............Material Design color palette.
+ * Color................Project's color assignments.
+ * Font.................Font declarations & settings.
+ * Animation............Custom animation timing functions, ported from Axis.
+ * Other................Miscellaneous project-wide variables.
+ *
+ * TOOLS
+ * Button...............Buttons tools.
+ * Form.................Form tools.
+ * Text.................Text tools.
+ *
+ * GENERIC
+ * Box-sizing...........Slightly better box-sizing practice.
+ * Normalize............Normalize.css from Necolas.
+ * Reset................Simple reset that complements Normalize.css.
+ *
+ * ELEMENTS
+ * Page.................Base styles for page-level elements.
+ * Link.................Simple styles for <a> element.
+ * Heading..............Very minimal (i.e. only font-size sets) styles for
+ *                      headings.
+ * Text.................Default styles for text elements.
+ * Button...............Default button styles.
+ * Form.................Base form styles (for <input>, <textarea>, etc).
+ * Image................Base image styles.
+ * Table................Simple table styles.
+ *
+ * OBJECTS
+ * Table................Simple object for manipulating the structure of <table>.
+ * Wrapper..............Page constraint object.
+ *
+ * COMPONENTS
+ * Button...............An example button component, and how it fits into the
+ *                      Breeze framework.
+ *
+ * HELPERS
+ * Accessibility........Helper classes that control content's accessibility.
+ * Box-model............Utility classes to put box-model values onto elements.
+ * Flexbox..............Helper classes to set and control Flexbox container.
+ * Heading..............Reassigning heading styles to helper classes.
+ * Print................Print styles that optimize the printing process and make
+ *                      the printed pages easier to read.
+ */
+
+
+
+
+
+$css-path = '/' 
+
+// SETTINGS
+// =============================================================================
+   
+// Global settings files that contain project-wide variables; things that need
+// to be made available to the entire codebase.
+
+@import $css-path + 'settings/ratio.settings.import'
+@import $css-path + 'settings/core.settings.import'
+@import $css-path + 'settings/palette.settings.import'
+@import $css-path + 'settings/color.settings.import'
+@import $css-path + 'settings/font.settings.import'
+@import $css-path + 'settings/animation.settings.import'
+@import $css-path + 'settings/other.settings.import'
+
+
+
+
+
+// TOOLS
+// =============================================================================
+
+// Globally used mixins and functions. Additional libs can be imported and
+// initialized there.
+
+@import $css-path + 'tools/button.tools.import'
+@import $css-path + 'tools/form.tools.import'
+@import $css-path + 'tools/text.tools.import'
+
+
+
+
+
+/* GENERIC
+ * ========================================================================== */
+
+/*   
+ * Low-specific & far-reaching rulesets: reset, normalize, box-sizing
+ * definition, etc. This is the first layer which generates actual CSS.   
+ */
+
+@import $css-path + 'generic/box-sizing.generic.import'
+@import $css-path + 'generic/normalize.generic.import'
+@import $css-path + 'generic/reset.generic.import'
+
+
+
+
+
+/* ELEMENTS
+ * ========================================================================== */
+
+/*
+ * Styles for unclassed HTML elements (e.g. <h1>, <input>). These come with
+ * default styling from the browser so we can redefine them there.
+ */
+
+@import $css-path + 'elements/page.elements.import'
+@import $css-path + 'elements/link.elements.import'
+@import $css-path + 'elements/heading.elements.import'
+@import $css-path + 'elements/text.elements.import'
+@import $css-path + 'elements/button.elements.import'
+@import $css-path + 'elements/form.elements.import'
+@import $css-path + 'elements/image.elements.import'
+@import $css-path + 'elements/table.elements.import'
+
+
+
+
+
+/* OBJECTS
+ * ========================================================================== */
+
+/*
+ * Class-based selectors which define objects, abstractions, and design 
+ * patterns. 
+ */
+
+@import $css-path + 'objects/table.objects.import'
+@import $css-path + 'objects/wrapper.objects.import'
+
+
+
+
+
+/* COMPONENTS
+ * ========================================================================== */
+
+/*
+ * Discrete, complete chunks of UI. This is where majority of designed
+ * components/chunks of UI are injected.
+ */
+
+@import $css-path + 'components/example.button.components.import'
+
+
+
+
+
+/* HELPERS
+ * ========================================================================== */
+
+/*
+ * Utilities and helper classes with ability to override anything which goes
+ * before.
+ */
+
+@import $css-path + 'helpers/accessibility.helpers.import'
+@import $css-path + 'helpers/box-model.helpers.import'
+@import $css-path + 'helpers/flexbox.helpers.import'
+@import $css-path + 'helpers/heading.helpers.import'
+@import $css-path + 'helpers/print.helpers.import'

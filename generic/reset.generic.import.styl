@@ -1,0 +1,111 @@
+/* ==========================================================================
+   RESET
+   ========================================================================== */
+
+/*
+ * A simple reset that complements Normalize.css.
+ */
+
+
+
+/*
+ * Get rid of ugly default outline for all elements, but don't forget to provide
+ * your own styling. There are a number of alternative methods to style elements
+ * that are in focus:
+ *
+ *   a) give it a background colour;
+ *   b) change the text colour (make it high contrast for blind people);
+ *   c) provide a custom outline.
+ *
+ * Further reading: www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/F78.
+ */
+
+:focus
+  outline 0
+
+
+/*
+ * Remove default padding and margin.
+ */
+
+body,
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, dd, ol, ul,
+figure,
+hr,
+fieldset, legend
+  margin 0
+  padding 0
+
+
+/*
+ * Reset default font styles in all browsers.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea 
+  font-family $font-family
+  font-size 1em
+
+
+/*
+ * Remove tap highlight on mobile Webkit browsers.
+ */
+
+a,
+button,
+input,
+textarea,
+select,
+label
+  -webkit-tap-highlight-color transparent
+
+
+/*
+ * 1. Reset Chrome and Firefox behaviour which sets a `min-width: min-content`
+ *    on fieldsets.
+ */
+
+fieldset
+  min-width 0 /* [1] */
+  border 0
+
+
+/*
+ * Remove spinner button of number picker input elements.
+ */
+
+input::-webkit-inner-spin-button, 
+input::-webkit-outer-spin-button
+  appearance none
+
+input[type="number"]
+  appearance textfield
+
+
+/*
+ * Remove bullets from list items.
+ */
+
+li
+  list-style none
+
+
+/*
+ * Remove default table spacing.
+ */
+
+table
+  border-collapse collapse
+
+
+/*
+ * Make <th> aligned to left.
+ */
+
+th
+  text-align left

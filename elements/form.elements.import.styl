@@ -1,0 +1,31 @@
+/* ==========================================================================
+   FORM
+   ========================================================================== */
+
+
+
+/*
+ * Set color to placeholder and label.
+ */
+
++placeholder()
+  color $placeholder-color
+
+label
+  color $placeholder-color
+
+
+/*
+ * Set placeholder behavior when text is wider than <input> field.
+ */
+
+input[placeholder]
+  text-overflow ellipsis
+
+
+/*
+ * Let the user resize only the height of <textarea> element.
+ */
+
+textarea
+  resize vertical

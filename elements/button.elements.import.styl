@@ -1,0 +1,30 @@
+/* ==========================================================================
+   BUTTON
+   ========================================================================== */
+
+
+
+/*
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Set content behavior when lack of space.
+ * 4. Force all buttons to appear clickable.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"]
+  display inline-block /* [1] */
+  vertical-align middle /* [2] */
+  white-space nowrap /* [3] */
+  overflow hidden /* [3] */
+  text-overflow ellipsis /* [3] */
+  text-align center
+  cursor pointer /* [4] */
+  
+  &,
+  &:hover,
+  &:active,
+  &:focus
+    text-decoration none

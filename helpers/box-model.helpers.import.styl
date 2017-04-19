@@ -1,0 +1,87 @@
+/* ==========================================================================
+   BOX-MODEL
+   ========================================================================== */
+
+/*
+ * Utility classes to put specific box-model values (margin, padding, height,
+ * width) onto elements.
+ */
+
+
+
+
+
+/* Margin and Padding
+   ========================================================================== */
+
+/*
+ * The below code will generate a suite of classes like:
+ *
+ *   .h-margin-bottom
+ *   .h-margin-right--xl
+ *   .h-margin-top--auto
+ *   .h-margin--auto
+ *   .h-padding-top--sm
+ *   .h-padding
+ *   .h-padding--0
+ */
+
+$spacing-properties = {
+  'margin':  'margin',
+  'padding': 'padding'
+}
+
+$spacing-directions = {
+  '-top':    '-top',
+  '-right':  '-right',
+  '-bottom': '-bottom',
+  '-left':   '-left',
+  '':        ''
+}
+
+$spacing-sizes = {
+  '--auto': auto,
+  '--xs':   $unit-xs,
+  '--sm':   $unit-sm,
+  '':       $unit,
+  '--lg':   $unit-lg,
+  '--xl':   $unit-xl,
+  '--0':    0
+}
+
+for $property, $property-name in $spacing-properties
+  
+  for $direction, $direction-name in $spacing-directions
+    
+    for $size, $value in $spacing-sizes
+    
+      unless $property-name is 'padding' and $value is 'auto'
+        .h-{$property}{$direction}
+          &{$size}
+            {$property-name}{$direction-name}: $value !important
+
+
+
+
+
+/* Height Property
+   ========================================================================== */
+
+.h-height-100
+  height 100% !important
+  
+.h-height-50
+  height 50% !important  
+
+
+
+
+
+/* Width Property
+   ========================================================================== */
+
+.h-width-100
+  width 100% !important
+
+.h-width-50
+  width 50% !important

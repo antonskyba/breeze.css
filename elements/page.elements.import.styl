@@ -1,0 +1,43 @@
+/* ==========================================================================
+   PAGE
+   ========================================================================== */
+
+
+
+/*
+ * Set custom text selection color.
+ */
+
+text-selection($highlight-bg-color, white)
+
+
+/*
+ * 1. Ensure the page always fills at least the entire height of the viewport.
+ * 2. Force scrollbars to always be visible to prevent `jumps` when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally. 
+ * 3. Set `font-size` of the <html> element to 62.5% of default font size
+ *    equal to 16px, which equates to 10px (or .625em). Therefore we can use
+ *    `rem` or `em` units for any element simpy dividing pixel value by 10. For
+ *    example:
+ *
+ *      p
+ *        font-size 1.6rem // Computes as 16px
+ *
+ *      .o-wrapper
+ *        max-width 120rem // Computes as 1200px
+ *
+ *    See developer.mozilla.org/ru/docs/Web/CSS/font-size for more detailed
+ *    info.
+ */
+
+html
+  min-height 100% /* [1] */
+  overflow-y scroll /* [2] */
+  font-size 62.5% /* [3] */
+
+
+body
+  font $font-size $font-family
+  line-height $line-height
+  color $color
