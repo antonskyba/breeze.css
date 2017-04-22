@@ -2,16 +2,14 @@
 // DEBUG
 // =============================================================================
 
-// Styles to make debugging easier: add a transparent background to all
+// Special styles to make debugging easier: add a transparent background to all
 // elements, add flags if you made mistakes like put in inline styles, forgot an
-// alt on an image, left the alt blank, etc. Not to be used in production.
+// alt on an image, left the alt blank, etc.
 //
-// Note: this file should go last.
+// Note: this file should go last and should not produce code to production CSS.
 
 
 
-// Debug variables.
-     
 $debug-error        = palette(Red, 'A400')
 $debug-warning      = palette(Yellow, 'A200')
 $debug-success      = palette(Green, 'A400')
@@ -19,8 +17,6 @@ $debug-success      = palette(Green, 'A400')
 $debug-bg           = purple
 $debug-border-width = 1px
 
-
-// Apply debug styling.
 
 if config('debug')
 
@@ -31,8 +27,8 @@ if config('debug')
     background rgba($debug-bg, .08) !important
 
 
-  // Make images without `alt` attribute red, with empty `alt` yellow, and rest
-  // with green border only.
+  // Make images without `alt` attribute red, with empty `alt` yellow, and the
+  // rest with green border only.
 
   img
     border $debug-border-width solid palette(Orange, 'A700') !important
@@ -48,8 +44,8 @@ if config('debug')
     filter hue-rotate(360deg) contrast(.9) saturate(5) !important
 
 
-  // Make link without `href` attribute red, with empty `alt` yellow, and rest
-  // with green border only.
+  // Make links without `href` attribute red, with empty `href` yellow, and the
+  // rest with green border only.
 
   a
     border $debug-border-width solid $debug-error !important
@@ -65,7 +61,7 @@ if config('debug')
     background rgba($debug-warning, .5) !important    
 
 
-  // Highlight elements which have inline styles or/and empty attributes such as
+  // Highlight elements that have inline styles or/and empty attributes such as
   // `class` or `id`.
 
   [style],
