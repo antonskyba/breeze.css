@@ -1,0 +1,75 @@
+// =============================================================================
+// DEBUG
+// =============================================================================
+
+// Styles to make debugging easier: add a transparent background to all
+// elements, add flags if you made mistakes like put in inline styles, forgot an
+// alt on an image, left the alt blank, etc. Not to be used in production.
+//
+// Note: this file should go last.
+
+
+
+// Debug variables.
+     
+$debug-error        = palette(Red, 'A400')
+$debug-warning      = palette(Yellow, 'A200')
+$debug-success      = palette(Green, 'A400')
+
+$debug-bg           = purple
+$debug-border-width = 1px
+
+
+// Apply debug styling.
+
+if config('debug')
+
+  // Apply transparent background to all elements. Handy for precise layout
+  // tweaks.
+
+  *
+    background rgba($debug-bg, .08) !important
+
+
+  // Make images without `alt` attribute red, with empty `alt` yellow, and rest
+  // with green border only.
+
+  img
+    border $debug-border-width solid palette(Orange, 'A700') !important
+    filter hue-rotate(320deg) contrast(.75) saturate(6) !important
+
+  img[alt]
+    border $debug-border-width solid $debug-success !important
+    filter none !important
+
+  img[alt=""],
+  img[alt="alt"]
+    border $debug-border-width solid $debug-warning !important
+    filter hue-rotate(360deg) contrast(.9) saturate(5) !important
+
+
+  // Make link without `href` attribute red, with empty `alt` yellow, and rest
+  // with green border only.
+
+  a
+    border $debug-border-width solid $debug-error !important
+    background rgba($debug-error, .2) !important
+
+  a[href]
+    border-color $debug-success !important
+    background none !important
+    
+  a[href="#"],
+  a[href="href"]
+    border $debug-border-width solid $debug-warning !important
+    background rgba($debug-warning, .5) !important    
+
+
+  // Highlight elements which have inline styles or/and empty attributes such as
+  // `class` or `id`.
+
+  [style],
+  [class=""],
+  [id=""]
+    border $debug-border-width solid $debug-warning !important
+    background rgba($debug-warning, .5) !important

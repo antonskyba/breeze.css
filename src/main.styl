@@ -23,6 +23,7 @@
  * Ratio................Ratios that can be used to produce spacing values.
  * Core.................Most important setup variables, such as Base Unit and
  *                      Base Ratio.
+ * Config...............Project-level configuration and feature switches.
  * Palette..............Material Design color palette.
  * Color................Project's color assignments.
  * Font.................Font declarations & settings.
@@ -65,6 +66,7 @@
  * Heading..............Reassigning heading styles to helper classes.
  * Print................Print styles that optimize the printing process and make
  *                      the printed pages easier to read.
+ * Debug................Styles to make debugging easier.
  */
 
 
@@ -79,6 +81,7 @@ $css-path = '/'
 // Global settings files that contain project-wide variables; things that need
 // to be made available to the entire codebase.
 
+@import $css-path + 'settings/config.settings.import'
 @import $css-path + 'settings/ratio.settings.import'
 @import $css-path + 'settings/core.settings.import'
 @import $css-path + 'settings/palette.settings.import'
@@ -184,3 +187,4 @@ $css-path = '/'
 @import $css-path + 'helpers/flexbox.helpers.import'
 @import $css-path + 'helpers/heading.helpers.import'
 @import $css-path + 'helpers/print.helpers.import'
+@import $css-path + 'helpers/debug.helpers.import'

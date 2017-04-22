@@ -1,0 +1,31 @@
+// =============================================================================
+// CONFIG
+// =============================================================================
+
+// Project-level configuration and feature switches.
+
+
+
+// A map of global config settings. Define any project-level configuration,
+// feature switches, etc. in here.
+
+$environments = 'dev' 'production'
+
+$config = {
+  'env':   $environments[0],
+  'debug': true
+}
+
+
+// You can access data in this map using the following function:
+//
+//   config(<key>)
+//
+// Example usage:
+//
+//   if config('debug')
+//     *
+//       border 1px solid fuchsia
+
+config($key)
+  return $config[$key]
