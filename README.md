@@ -27,7 +27,7 @@ Breeze is not available on Npm or Bower, therefore you have to download the proj
 
 ## Core ideas
 
-#### Make CSS maintanable again!
+#### Make CSS maintanable again
 
 Under the hood Breeze uses so-called Inverted Triangle CSS (ITCSS): method of CSS-code organisation that will keep your project styles easy to maintain through whole development process.
 
