@@ -23,7 +23,7 @@ Breeze is not available on Npm or Bower, therefore you have to download the proj
    Quickly overview `example.button.components.styl`. This is just an example file that shows you how it fits into the Breeze framework, but you may leave it and customize for your project needs.  
    
 
-> **Note:** Breeze uses most recent version of Normalize.css that is available during one of the latest framework updates, but if you want to receive Normalize updates through Bower or Npm delete `normalize.generic.styl`, add Normalize.css as a dependency to your project and import it to the `app.styl`.
+> **Note:** Breeze uses most recent version of Normalize.css that is available during the latest major framework update, but if you want to receive Normalize updates through Bower or Npm delete `normalize.generic.styl`, add Normalize.css as a dependency to your project and import it to the `app.styl`.
 
 ## Core ideas
 
