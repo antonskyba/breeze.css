@@ -25,9 +25,9 @@ Breeze is not available on Npm or Bower, therefore you have to download the sour
 
 > **Note:** Breeze uses most recent version of Normalize.css that is available during the latest major framework update, but if you want to receive Normalize updates through Bower or Npm delete `normalize.generic.styl`, add Normalize.css as a dependency to your project and import it to the `app.styl`.
 
-## Core ideas
+## Core framework ideas
 
-#### Make CSS maintanable again
+#### Make CSS maintainable again
 
 Under the hood Breeze uses so-called Inverted Triangle CSS (ITCSS): method of CSS-code organisation that will keep your project styles easy to maintain through whole development process.
 
