@@ -14,16 +14,16 @@ Breeze is not available on Npm or Bower, therefore you have to download the proj
 
 1. Set up most important Breeze variables.
 
-   - Open app.styl and find the $css-path variable. Assign to this variable path to your styles folder in case if you want to keep app.styl and rest *.styl files in separate folders.  
+   - Open app.styl and find the `$css-path` variable. Assign to this variable path to your styles folder in case if you want to keep `app.styl` and rest `*.styl` files in separate folders.  
   
-   - Open core.settings.styl and choose your Base Unit and Base Ratio values. You will find description of these units and some useful links that may help you make your choice.  
+   - Open `core.settings.styl` and choose your Base Unit and Base Ratio values. You will find description of these units and some useful links that may help you make your choice.  
 
 2. example.button.components.styl.
 
-   Quickly overview example.button.components.styl. This is just an example file that shows you how it fits into the Breeze framework, but you may leave it and customize for your project needs.  
+   Quickly overview `example.button.components.styl`. This is just an example file that shows you how it fits into the Breeze framework, but you may leave it and customize for your project needs.  
    
 
-_**Note:** Breeze uses most recent version of Normalize.css that is available during one of the latest framework updates, but if you want to receive Normalize updates through Bower or Npm delete normalize.generic.styl, add Normalize.css as a dependency to your project and import it to the app.styl._
+> **Note:** Breeze uses most recent version of Normalize.css that is available during one of the latest framework updates, but if you want to receive Normalize updates through Bower or Npm delete `normalize.generic.styl`, add Normalize.css as a dependency to your project and import it to the `app.styl`.
 
 ## Core ideas
 
