@@ -8,17 +8,17 @@ Breeze is lightweight, scalable, Stylus-based framework for medium and large web
 
 ## Installation
 
-Breeze is not available on Npm or Bower, therefore you have to download the project's source folder and put it into your project's styles folder. 
+Breeze is not available on Npm or Bower, therefore you have to download the source folder and put it into your project's styles folder. 
 
 ## Getting started
 
 1. Set up most important Breeze variables.
 
-   - Open app.styl and find the `$css-path` variable. Assign to this variable path to your styles folder in case if you want to keep `app.styl` and rest `*.styl` files in separate folders.  
+   - Open `app.styl` and find the `$css-path` variable. By default majority of styles are located in the same folder as  the main file, but in case if you want to keep them separately assign to this variable path to your styles folder.  
   
-   - Open `core.settings.styl` and choose your Base Unit and Base Ratio values. You will find description of these units and some useful links that may help you make your choice.  
+   - Open `core.settings.styl` and choose your Base Unit and Base Ratio values. You will find description of these units and few useful links that may help you make your choice.  
 
-2. example.button.components.styl.
+2. Button example.
 
    Quickly overview `example.button.components.styl`. This is just an example file that shows you how it fits into the Breeze framework, but you may leave it and customize for your project needs.  
    
