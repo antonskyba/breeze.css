@@ -5,25 +5,26 @@
 
 
 /*
- * Apply default font sizes for headings 1 through 6. Anything else should
- * likely be applied via classes (see for more detailed info:
- * csswizardry.com/2016/02/managing-typography-on-large-apps).
+ * Define headings classes to separate semantics from styling, e.g. we
+ * semantically need an H2, but we want it to be styled & sized like an H1:
+ *
+ *   <h2 class="o-h1"></h2>
  */
 
-h1
+.o-h1
   font-size $h1-font-size
 
-h2
+.o-h2
   font-size $h2-font-size
 
-h3
+.o-h3
   font-size $h3-font-size
 
-h4
+.o-h4
   font-size $h4-font-size
 
-h5
+.o-h5
   font-size $h5-font-size
 
-h6
+.o-h6
   font-size $h6-font-size
