@@ -1,4 +1,4 @@
-# ![Breeze.css](https://habrastorage.org/files/847/d56/97b/847d5697bec349e6ba54ea9dd396a2c5.png)
+# ![Breeze.css](https://habrastorage.org/files/ede/685/cf4/ede685cf4074400a8523cb34c94809d2.png)
 
 **Framework that inspires on writing better CSS**
 
