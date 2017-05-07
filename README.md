@@ -1,8 +1,6 @@
-# Breeze.css
-_Framework that inspires on writing better CSS_
+# ![Breeze.css](https://habrastorage.org/files/ede/685/cf4/ede685cf4074400a8523cb34c94809d2.png)
 
-
-## About
+**Framework that inspires on writing better CSS**
 
 Breeze is lightweight, scalable, Stylus-based framework for medium and large web projects. It is not a set of designed UI elements, but instead it provides you with a ready-to-use architectural solution that helps to quickly bootstrap a project without worrying about basic things.
 
