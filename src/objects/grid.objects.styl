@@ -1,0 +1,220 @@
+/* ==========================================================================
+   GRID
+   ========================================================================== */
+
+/*
+ * The grid is a simplified method for laying out content for multiple screen
+ * sizes. It is enclosed by a container element and by default has 12 columns
+ * and predefined margins and paddings. The grid system has the following view:
+ *
+ *   <div class="o-grid">
+ *     <div class="o-cell  o-cell--1of4"></div>
+ *     <div class="o-cell  o-cell--1of4"></div>
+ *   </div> 
+ *
+ * The above will create a four-column structure in which each column will
+ * fluidly fill 1/4 of the width of the parent. We can have more complex
+ * systems:
+ *
+ *   <div class="o-grid">
+ *     <div class="o-cell  o-cell--1of1  o-cell--1of3-desktop"></div>
+ *     <div class="o-cell  o-cell--1of2  o-cell--1of3-desktop"></div>
+ *     <div class="o-cell  o-cell--1of2  o-cell--1of3-desktop"></div>
+ *   </div>  
+ *
+ * The above will create a system in which the first item will be 100% width
+ * until we enter our desktop breakpoint, when it will become 33.333% width. The
+ * second and third items will be 50% of their parent, until they also become
+ * 33.333% width at the desktop breakpoint.
+ *
+ * We can also manipulate entire layout system by adding a series of modifiers
+ * to the `.o-grid` block. For example:
+ *
+ *   <div class="o-grid  o-grid--reverse">
+ *
+ * This will reverse the displayed order of the system so that it runs in the
+ * opposite order to our source, effectively flipping the system over. 
+ *
+ * Also, both grid and cells can be complemented with the helper classes, e.g.:
+ *
+ *   <div class="o-grid  h-padding--0">
+ *   <div class="o-grid  h-justify-end">
+ *   <div class="o-cell  h-align-self-center">
+ *
+ * There are several more options available: explore them below.
+ */
+
+
+
+
+
+// Grid Settings
+// =============================================================================
+
+// How many columns would you like in your grid system? Depending on this
+// number, suit of fraction classes will be generated, e.g.:
+//
+//   .o-cell--1of2
+//   .o-cell--6of10
+//   .o-cell--5of12
+
+$grid-max-columns = 12
+
+
+// This defines the delimiter for the fractions suffix in the class name:
+// `1of2`, `4of5`, etc.
+
+$widths-delimiter = 'of'
+
+
+// Define the default gap between cells.
+
+$grid-gap         = $unit-xs
+
+
+
+
+
+/* Default/Mandatory Classes
+   ========================================================================== */
+
+/*
+ * 1. Allows us to use the layout object on any type of element.
+ * 2. Stretch cells to fit the grid.
+ */
+
+.o-grid
+  display flex /* [1] */
+  flex-flow row wrap
+  align-items stretch /* [2] */
+  padding $grid-gap
+  margin 0 auto
+  list-style none /* [1] */
+
+
+/*
+ * 1. By default, all cells are full-width.
+ * 2. Required in order to combine fluid widths and paddings.
+ */
+
+.o-cell
+  width "calc(100% - %s)" % ($grid-gap * 2) /* [1] */
+  margin $grid-gap
+  box-sizing border-box /* [2] */
+
+
+
+
+
+/* Spacing Variants
+   ========================================================================== */
+
+/*
+ * Zero inner (cell's margin) and outer (grid's padding) gap.
+ */
+
+.o-grid--flush
+  padding 0
+  
+  > .o-cell
+    width 100%
+    margin 0
+
+
+/*
+ * Zero outer gap only.
+ * 1. Apply negative margin to get rid of the outer gap on first and last rows
+ *    and columns.
+ */
+
+.o-grid--no-outer-gap
+  padding 0
+  margin -($grid-gap)
+
+
+
+
+
+/* Order Variants
+   ========================================================================== */
+
+/*
+ * Reverse the order of the grid system.
+ */
+
+.o-grid--reverse
+  flex-direction row-reverse
+
+
+/*
+ * Define order override classes.
+ */
+
+for $order in 1..$grid-max-columns
+  .o-cell--order-{$order}
+    order $order
+
+
+
+
+
+/* Fraction Classes
+   ========================================================================== */
+
+// A mixin for building cells classes. Pass in the number of columns we want the
+// widths to have, and an optional suffix for responsive widths. E.g. to create
+// fractions of one whole, halves, thirds and quarters for a small breakpoint:
+//
+//   widths(4, 'mobile')
+
+widths($columns, $breakpoint-name = null)
+
+  // Loop through the number of columns for each denominator of our fractions.
+  for $denominator in 1..$columns
+    
+    // Begin creating a numerator for our fraction up until we hit the
+    // denominator.
+    for $numerator in 1..$denominator
+        
+        $cell-width = percentage($numerator / $denominator)
+        
+        // Build a class in the format `.o-cell--3of4-[breakpoint]`.
+        .o-cell--{$numerator}{$widths-delimiter}{$denominator}{$breakpoint-name}
+          width s("calc(%s - %s)", $cell-width, ($grid-gap * 2))
+          
+          // Define full-width cells in grid with the `flush` modifier.
+          /.o-grid--flush &
+            width $cell-width
+        
+        if $breakpoint-name    
+          
+          // Build order override classes for different screen resolutions.
+          .o-cell--order-{$denominator}{$breakpoint-name}
+            order $denominator
+
+
+/*
+ * The following will generate cells widths classes based on the value defined
+ * in the `$grid-max-columns` variable, e.g.:
+ *
+ *   .o-cell--1of8
+ */
+
+widths($grid-max-columns)
+
+
+/*
+ * If we have breakpoints defined (at `breakpoint.settings.styl`), automatically
+ * generate grid system for each of them and give them a responsive suffix,
+ * e.g.:
+ *
+ *   .o-cell--3of12-desktop
+ */
+
+if $breakpoints
+  
+  for $breakpoint-name, $breakpoint-value in $breakpoints
+    
+    +at($breakpoint-name)
+      
+      widths($grid-max-columns, $breakpoint-separator + $breakpoint-name)
