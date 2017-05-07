@@ -22,3 +22,24 @@
 
 .h-visibility-hidden
   visibility hidden !important
+
+
+/*
+ * If we have breakpoints defined (at `breakpoint.settings.styl`), automatically
+ * generate accessibility helpers classes for each of them and give them a
+ * responsive suffix, e.g.:
+ *
+ *   .h-display-none-desktop
+ */
+
+if $breakpoints
+  
+  for $breakpoint-name, $breakpoint-value in $breakpoints
+    
+    +at($breakpoint-name)
+    
+      .h-display-none{$breakpoint-separator}{$breakpoint-name}
+        display none !important
+        
+      .h-visibility-hidden{$breakpoint-separator}{$breakpoint-name}
+        visibility hidden !important

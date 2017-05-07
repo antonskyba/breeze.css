@@ -1,0 +1,57 @@
+// =============================================================================
+// BREAKPOINT
+// =============================================================================
+
+// Breakpoints at which layout changes adapting to different screen sizes.
+
+
+
+// More sensible layout breakpoints:
+// medium.freecodecamp.com/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862
+// Changes here will be reflected on Rupture settings (see below) and any ohter
+// stuff that depends on breakpoints (grid, helpers, etc).
+
+$breakpoints = {
+  mobile:   0,
+  tablet-p: 600px,
+  tablet-l: 900px,
+  desktop:  1200px,
+  hd:       1800px
+}
+
+
+// Breakpoint separator used in responsive suffixes for the classes that depend
+// on screen resolution, e.g.:
+//
+//   .o-cell--2of3-mobile
+//   .h-display-none-desktop
+
+$breakpoint-separator = '-'
+
+
+
+
+
+// Rupture Settings
+// =============================================================================
+
+// 1. Convert pixel breakpoint values into `em` values.
+// 2. Set custom breakpoint values to Rupture scale.
+// 3. Simplify us reference to corresponding scale measures in Rupture mixins,
+//    e.g.:
+//
+//      +at('mobile')
+//      +above('tablet-l')
+//      +below('desktop')
+
+rupture.enable-em-breakpoints = true // [1]
+rupture.scale                 = values($breakpoints) // [2]
+rupture.scale-names           = keys($breakpoints) // [3]
+
+
+// Set variables for such mixins as `+mobile()`, `+tablet()`, `+desktop()` and
+// `+hd()`.
+
+rupture.mobile-cutoff         = $breakpoints.tablet-p
+rupture.desktop-cutoff        = $breakpoints.desktop
+rupture.hd-cutoff             = $breakpoints.hd
