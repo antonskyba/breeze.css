@@ -16,14 +16,14 @@
 .c-btn
   button-color(palette(Grey, '200'))
   flex-shrink 0
-  min-width 7em // [1]
-  padding 1em // [1]
+  min-width 7em /* [1] */
+  padding 1em /* [1] */
   border none
   border-radius $global-radius
   font-size $font-size-sm
   font-weight bold
   text-transform uppercase
-  letter-spacing .05em // [1]
+  letter-spacing .05em /* [1] */
   transition $global-duration
   
   &[disabled="disabled"]
@@ -33,11 +33,14 @@
 
 
 
-  /* Style Variants
-     ======================================================================== */
+/* Style Variants
+   ========================================================================== */
+
+.c-btn
 
   &--primary
     button-color($primary)
+
 
   &--accent
     button-color($accent, white)
@@ -46,11 +49,14 @@
 
 
 
-  /* Size Variants
-     ======================================================================== */
+/* Size Variants
+   ========================================================================== */
 
+.c-btn
+  
   &--sm
     font-size $font-size-xs
+
 
   &--lg
     padding 1.5em
