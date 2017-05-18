@@ -5,22 +5,25 @@
 
 
 /*
- * Apply default monospace font to <pre> and phrase elements.
+ * 1. Apply default monospace font to <pre> and phrase elements.
+ * 2. Make text size 85% of surrounding text — optimal for code elements.
  */
 
 pre,
 code,
 kbd,
 samp
-  font-family $font-family-monospace
+  font-family $font-family-monospace /* [1] */
+  font-size .85em /* [2] */
 
 
 /*
- * Set small font size to small text elements.
+ * Make size of small text elements always be slightly smaller than surrounding
+ * text.
  */
 
 sup,
 sub,
 small,
 figcaption
-  font-size $font-size-sm
+  font-size (1 / $base-ratio) * 1em
