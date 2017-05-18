@@ -1,3 +1,97 @@
 /* ==========================================================================
    TYPE
    ========================================================================== */
+
+/*
+ * Text & font helper classes.
+ */
+
+
+
+/*
+ * Generate `text-align` classes:
+ *
+ *   .h-text-left
+ *   .h-text-center
+ *   .h-text-right
+ *   .h-text-justify
+ */
+
+for $align in left center right justify
+  
+  .h-text-{$align}
+    text-align $align !important
+
+
+/*
+ * Text wrapping.
+ */
+
+.h-text-nowrap
+  white-space nowrap !important
+
+
+/*
+ * Generate `text-transform` classes:
+ *
+ *   .h-text-lowercase
+ *   .h-text-uppercase
+ *   .h-text-capitalize
+ */
+
+for $transform in lowercase uppercase capitalize
+  
+  .h-text-{$transform}
+    text-transform $transform !important
+
+
+/*
+ * Font sizes helper classes.
+ */
+
+.h-font-4x
+  font-size $font-size-4x !important
+
+.h-font-3x
+  font-size $font-size-3x !important
+
+.h-font-2x
+  font-size $font-size-2x !important
+
+.h-font-xl
+  font-size $font-size-xl !important
+
+.h-font-lg
+  font-size $font-size-lg !important
+
+.h-font-md
+  font-size $font-size !important
+
+.h-font-sm
+  font-size $font-size-sm !important
+
+.h-font-xs
+  font-size $font-size-xs !important
+
+
+/*
+ * Colors helper classes.
+ */
+
+.h-color-primary
+  color $primary !important
+
+.h-color-accent
+  color $accent !important
+
+.h-color-success
+  color $success !important
+  
+.h-color-warning
+  color $warning !important
+
+.h-color-danger
+  color $danger !important
+
+.h-color-hint
+  color $hint-color !important
