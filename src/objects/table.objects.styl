@@ -8,40 +8,49 @@
 
 
 
+/*
+ * 1. Ensure tables fill up as much space as possible.
+ */
+
 .o-table
-  background-color white
+  width 100% /* [1] */
 
 
 
 
 
-  /* Equal-Width Table Cells
-     ======================================================================== */
+/* Equal-Width Table Cells
+   ========================================================================== */
 
-  /*
-   * `table-layout: fixed` forces all cells within a table to occupy the same
-   * width as each other. This also has performance benefits: because the 
-   * browser does not need to (re)calculate cell dimensions based on content it 
-   * discovers, the table can be rendered very quickly. Further reading:
-   * developer.mozilla.org/en-US/docs/Web/CSS/table-layout#Values
-   */
+/*
+ * `table-layout: fixed` forces all cells within a table to occupy the same
+ * width as each other. This also has performance benefits: because the 
+ * browser does not need to (re)calculate cell dimensions based on content it 
+ * discovers, the table can be rendered very quickly. Further reading:
+ * developer.mozilla.org/en-US/docs/Web/CSS/table-layout#Values
+ */
 
-  &--fixed
-    table-layout fixed
-
-
+.o-table--fixed
+  table-layout fixed
 
 
 
-  /* Size Variants
-     ======================================================================== */
 
+
+/* Size Variants
+   ========================================================================== */
+
+.o-table
+  
   &--sm
+    
     th,
     td
       padding $unit-xs
 
+
   &--lg
+    
     th,
     td
       padding $unit-sm
