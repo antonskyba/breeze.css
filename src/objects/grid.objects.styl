@@ -132,13 +132,14 @@ $grid-gap         = $unit-xs
 
 /*
  * Zero outer gap only.
+ *
  * 1. Apply negative margin to get rid of the outer gap on first and last rows
  *    and columns.
  */
 
 .o-grid--no-outer-gap
   padding 0
-  margin -($grid-gap)
+  margin -($grid-gap) /* [1] */
 
 
 

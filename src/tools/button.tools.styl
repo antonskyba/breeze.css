@@ -4,21 +4,6 @@
 
 
 
-// Apply styles for disabled buttons.
-
-button-disabled($background-color, $text-color = null)
-  $text-color = (light($background-color) ? $color : white) unless $text-color
-
-  background-color $background-color
-  color $text-color
-  pointer-events none
-  
-  &:hover,
-  &:focus,
-  &:active
-    background-color @background-color
-
-
 // Set button's background & color, including `:hover` and `:active` states.
 
 button-color($background-color, $text-color = null)
@@ -32,3 +17,18 @@ button-color($background-color, $text-color = null)
 
   &:active
     background-color mix($background-color, #000000, 80%)
+
+
+// Apply styles for disabled buttons.
+
+button-disabled($background-color, $text-color = null)
+  $text-color = (light($background-color) ? $color : white) unless $text-color
+
+  background-color $background-color
+  color $text-color
+  pointer-events none
+  
+  &:hover,
+  &:focus,
+  &:active
+    background-color @background-color

@@ -7,12 +7,13 @@
 
 
 
-// 1. Base Unit is a root number and a lot of things are dependent on it to keep
+// 1. Base Unit is a core number and a lot of things are dependent on it to keep
 //    UI solid, consistent and meaningful. It can be the size of your body text
-//    (set in `font.settings.styl`), line height, typeface x-height, etc. By
-//    default it equals to 16px, but you are free to choose the size at which
-//    your body text typeface looks best. Set this value in pixels and it will
-//    be automatically converted to rems.
+//    (set in `font.settings.styl`), line height, typeface x-height, etc. Set
+//    this value in pixels and it will be automatically converted to `rems`.
+//
+//    HINT: by default it equals to 16px, but you are free to choose the size at
+//    which your body text typeface looks best.
 //
 // 2. Base Ratio is multiplied by the Base Unit to produce a scale of numbers
 //    (see `Modular Scale` below) that are proportionally related. Ratio should
@@ -34,10 +35,11 @@ $base-ratio = $perfect-fourth // [2]
 // =============================================================================
 
 // Modular Scale is determined based on Base Unit and Base Ratio (defined
-// above), but you're willing to make your own Modular Scale system: add one or
-// more ratios/bases (therefore you will receive more numbers to your scale),
-// multiply instead of raising to a power, or use another set of coefficients,
-// e.g.:
+// above).
+//
+// HINT: you're willing to make your own Modular Scale system: add one or more
+// ratios/bases (therefore you will get more numbers to your scale), multiply
+// instead of raising to a power, or use another set of coefficients, e.g.:
 //
 //   - from 0 to 1:       0.125 0.25 0.5 0.75 1;
 //   — from 1 to 2:       1 1.125 1.25 1.5 1.75;
