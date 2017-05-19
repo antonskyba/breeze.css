@@ -10,7 +10,7 @@
  *   <div class="o-grid">
  *     <div class="o-cell  o-cell--1of4"></div>
  *     <div class="o-cell  o-cell--1of4"></div>
- *   </div> 
+ *   </div>
  *
  * The above will create a four-column structure in which each column will
  * fluidly fill 1/4 of the width of the parent. We can have more complex
@@ -20,7 +20,7 @@
  *     <div class="o-cell  o-cell--1of1  o-cell--1of3-desktop"></div>
  *     <div class="o-cell  o-cell--1of2  o-cell--1of3-desktop"></div>
  *     <div class="o-cell  o-cell--1of2  o-cell--1of3-desktop"></div>
- *   </div>  
+ *   </div>
  *
  * The above will create a system in which the first item will be 100% width
  * until we enter our desktop breakpoint, when it will become 33.333% width. The
@@ -41,6 +41,15 @@
  *   <div class="o-grid  h-justify-end">
  *   <div class="o-cell  h-align-self-center">
  *
+ * Grid works pretty well with auto margin applied to cells:
+ *
+ *   <div class="o-grid">
+ *     <div class="o-cell  o-cell--1of4  h-margin-left--auto"></div>
+ *   </div>
+ *
+ * This will place cell at the end of X axis. More information about aligning
+ * with `auto` margins: https://www.w3.org/TR/css-flexbox-1/#auto-margins.
+ * 
  * There are several more options available: explore them below.
  */
 
