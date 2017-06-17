@@ -4,7 +4,20 @@
 
 
 
+
+
+// Button Color
+// =============================================================================
+
 // Set button's background & color, including `:hover` and `:active` states.
+
+button-lighter($background-color, $amount = $tint-grades[2])
+  background-color mix($background-color, white, $amount)
+
+
+button-darker($background-color, $amount = $tint-grades[2])
+  background-color mix($background-color, black, $amount)
+
 
 button-color($background-color, $text-color = null)
   $text-color = (light($background-color) ? $body-color : white) unless $text-color
@@ -13,13 +26,19 @@ button-color($background-color, $text-color = null)
   color $text-color
 
   &:hover
-    background-color mix($background-color, #FFFFFF, 80%)
+    button-lighter(@background-color)
     color @color
 
   &:active
-    background-color mix($background-color, #000000, 80%)
+    button-darker(@background-color)
     color @color
 
+
+
+
+
+// Button Disabled
+// =============================================================================
 
 // Apply styles for disabled buttons.
 
@@ -28,6 +47,7 @@ button-disabled($background-color, $text-color = null)
 
   background-color $background-color
   color $text-color
+  cursor default
   pointer-events none
   
   &:hover,

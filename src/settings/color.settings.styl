@@ -62,6 +62,50 @@ $color-danger  = red // [3]
 
 
 
+// Brand Color Tints
+// =============================================================================
+
+// Different percentages of white and black added to the brand colors to fill
+// out the range of color palette.
+
+$tint-grades       = 25% 50% 75%
+
+
+// Primary color tints.
+
+$color-primary-l25 = mix(white, $color-primary, $tint-grades[0])
+$color-primary-l50 = mix(white, $color-primary, $tint-grades[1])
+$color-primary-l75 = mix(white, $color-primary, $tint-grades[2])
+
+$color-primary-d25 = mix(black, $color-primary, $tint-grades[0])
+$color-primary-d50 = mix(black, $color-primary, $tint-grades[1])
+$color-primary-d75 = mix(black, $color-primary, $tint-grades[2])
+
+
+// Accent color tints.
+
+$color-accent-l25  = mix(white, $color-accent, $tint-grades[0])
+$color-accent-l50  = mix(white, $color-accent, $tint-grades[1])
+$color-accent-l75  = mix(white, $color-accent, $tint-grades[2])
+
+$color-accent-d25  = mix(black, $color-accent, $tint-grades[0])
+$color-accent-d50  = mix(black, $color-accent, $tint-grades[1])
+$color-accent-d75  = mix(black, $color-accent, $tint-grades[2])
+
+
+
+
+
+// Additional Colors
+// =============================================================================
+
+$color-hint         = palette(Black, 'Hint Text')
+$color-disabled     = palette(Black, 'Disabled Text')
+
+
+
+
+
 // Color Settings
 // =============================================================================
 
@@ -69,5 +113,4 @@ $color-danger  = red // [3]
 
 $body-color         = palette(Black, 'Text')
 $link-color         = $accent
-$hint-color         = palette(Black, 'Hint Text')
 $highlight-bg-color = palette(Grey, '500') // [1]
