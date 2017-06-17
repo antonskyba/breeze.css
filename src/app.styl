@@ -45,16 +45,12 @@
  *
  * ELEMENTS
  * Page.................Base styles for page-level elements.
- * Link.................Simple styles for <a> element.
- * Heading..............Very minimal (i.e. only font-size sets) styles for
- *                      headings.
- * Type.................Default styles for text elements.
+ * Type.................Default styles for text elements: headings, link, etc.
  * Button...............Default button styles.
  * Form.................Base form styles (for <input>, <textarea>, etc).
  * Image................Base image styles.
  *
  * OBJECTS
- * Heading..............Headings classes to separate semantics from styling.
  * Grid.................Grid module.
  * Wrapper..............Page constraint object.
  * Table................Simple object for manipulating the structure of <table>.
@@ -139,8 +135,6 @@ $css-path = '/'
  */
 
 @import $css-path + 'elements/page.elements'
-@import $css-path + 'elements/link.elements'
-@import $css-path + 'elements/heading.elements'
 @import $css-path + 'elements/type.elements'
 @import $css-path + 'elements/button.elements'
 @import $css-path + 'elements/form.elements'
@@ -158,7 +152,6 @@ $css-path = '/'
  * patterns. 
  */
 
-@import $css-path + 'objects/heading.objects'
 @import $css-path + 'objects/grid.objects'
 @import $css-path + 'objects/wrapper.objects'
 @import $css-path + 'objects/table.objects'

@@ -9,6 +9,34 @@
 
 
 /*
+ * Redefine all of our basic heading styles against helper classes so as to
+ * allow for double stranded heading hierarchy, e.g. we semantically need an H2,
+ * but we want it to be sized like an H1:
+ *
+ *   <h2 class="u-h1"></h2>
+ * 
+ */
+
+.h-h1
+  font-size $h1-font-size
+
+.h-h2
+  font-size $h2-font-size
+
+.h-h3
+  font-size $h3-font-size
+
+.h-h4
+  font-size $h4-font-size
+
+.h-h5
+  font-size $h5-font-size
+
+.h-h6
+  font-size $h6-font-size
+
+
+/*
  * Generate `text-align` classes:
  *
  *   .h-text-left

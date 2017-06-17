@@ -2,6 +2,46 @@
    TYPE
    ========================================================================== */
 
+/*
+ * Default styles for text elements: headings, link, phrase elements, etc.
+ */
+
+
+
+/*
+ * Apply default font-size for headings 1 through 6. Anything more opinionated
+ * than simple font-size changes should likely be applied via classes (see:
+ * csswizardry.com/2016/02/managing-typography-on-large-apps). 
+ */
+
+h1
+  font-size $h1-font-size
+
+h2
+  font-size $h2-font-size
+
+h3
+  font-size $h3-font-size
+
+h4
+  font-size $h4-font-size
+
+h5
+  font-size $h5-font-size
+
+h6
+  font-size $h6-font-size
+
+
+/*
+ * 1. Offset link from surrounding text.
+ * 2. Remove link's underline.
+ */
+
+a
+  font-weight bold /* [1] */
+  color $link-color /* [1] */
+  text-decoration none /* [2] */
 
 
 /*
