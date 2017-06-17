@@ -8,33 +8,103 @@
 
 
 
+
+
+/* Font Size Helpers
+   ========================================================================== */
+
+.h-font-4x
+  font-size $font-size-4x !important
+
+.h-font-3x
+  font-size $font-size-3x !important
+
+.h-font-2x
+  font-size $font-size-2x !important
+
+.h-font-xl
+  font-size $font-size-xl !important
+
+.h-font-lg
+  font-size $font-size-lg !important
+
+.h-font-md
+  font-size $font-size !important
+
+.h-font-sm
+  font-size $font-size-sm !important
+
+.h-font-xs
+  font-size $font-size-xs !important
+
+
+
+
+
+/* Headings Helpers
+   ========================================================================== */
+
 /*
  * Redefine all of our basic heading styles against helper classes so as to
  * allow for double stranded heading hierarchy, e.g. we semantically need an H2,
  * but we want it to be sized like an H1:
  *
- *   <h2 class="u-h1"></h2>
+ *   <h2 class="h-h1"></h2>
  * 
  */
 
 .h-h1
-  font-size $h1-font-size
+  font-size $h1-font-size !important
 
 .h-h2
-  font-size $h2-font-size
+  font-size $h2-font-size !important
 
 .h-h3
-  font-size $h3-font-size
+  font-size $h3-font-size !important
 
 .h-h4
-  font-size $h4-font-size
+  font-size $h4-font-size !important
 
 .h-h5
-  font-size $h5-font-size
+  font-size $h5-font-size !important
 
 .h-h6
-  font-size $h6-font-size
+  font-size $h6-font-size !important
 
+
+
+
+
+/* Color Helpers
+   ========================================================================== */
+
+.h-color-primary
+  color $color-primary !important
+
+.h-color-accent
+  color $color-accent !important
+
+.h-color-success
+  color $color-success !important
+  
+.h-color-warning
+  color $color-warning !important
+
+.h-color-danger
+  color $color-danger !important
+
+.h-color-hint
+  color $color-hint !important
+  
+.h-color-disabled
+  color $color-disabled !important
+
+
+
+
+
+/* Text Manipulating
+   ========================================================================== */
 
 /*
  * Generate `text-align` classes:
@@ -71,55 +141,3 @@ for $transform in lowercase uppercase capitalize
   
   .h-text-{$transform}
     text-transform $transform !important
-
-
-/*
- * Font sizes helper classes.
- */
-
-.h-font-4x
-  font-size $font-size-4x !important
-
-.h-font-3x
-  font-size $font-size-3x !important
-
-.h-font-2x
-  font-size $font-size-2x !important
-
-.h-font-xl
-  font-size $font-size-xl !important
-
-.h-font-lg
-  font-size $font-size-lg !important
-
-.h-font-md
-  font-size $font-size !important
-
-.h-font-sm
-  font-size $font-size-sm !important
-
-.h-font-xs
-  font-size $font-size-xs !important
-
-
-/*
- * Colors helper classes.
- */
-
-.h-color-primary
-  color $color-primary !important
-
-.h-color-accent
-  color $color-accent !important
-
-.h-color-success
-  color $color-success !important
-  
-.h-color-warning
-  color $color-warning !important
-
-.h-color-danger
-  color $color-danger !important
-
-.h-color-hint
-  color $hint-color !important
