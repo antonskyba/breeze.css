@@ -62,7 +62,9 @@ for $property, $property-name in $spacing-properties
     for $size, $value in $spacing-sizes
     
       unless $property-name is 'padding' and $value is 'auto'
+      
         .h-{$property}{$direction}
+          
           &{$size}
             {$property-name}{$direction-name}: $value !important
 
