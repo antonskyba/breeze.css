@@ -107,7 +107,7 @@ $grid-gap         = $unit-xs
  */
 
 .o-cell
-  width "calc(100% - %s)" % ($grid-gap * 2) /* [1] */
+  width 'calc(100% - %s)' % ($grid-gap * 2) /* [1] */
   margin $grid-gap
   box-sizing border-box /* [2] */
 
@@ -190,7 +190,7 @@ widths($columns, $breakpoint-name = null)
         
         // Build a class in the format `.o-cell--3of4-[breakpoint]`.
         .o-cell--{$numerator}{$widths-delimiter}{$denominator}{$breakpoint-name}
-          width s("calc(%s - %s)", $cell-width, ($grid-gap * 2))
+          width s('calc(%s - %s)', $cell-width, ($grid-gap * 2))
           
           // Define full-width cells in grid with the `flush` modifier.
           /.o-grid--flush > &
