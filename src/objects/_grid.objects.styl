@@ -37,14 +37,14 @@
  *
  * Also, both grid and cells can be complemented with the helper classes, e.g.:
  *
- *   <div class="o-grid  h-padding--0">
- *   <div class="o-grid  h-justify-end">
- *   <div class="o-cell  h-align-self-center">
+ *   <div class="o-grid  u-padding--0">
+ *   <div class="o-grid  u-justify-end">
+ *   <div class="o-cell  u-align-self-center">
  *
  * Grid works pretty well with auto margin applied to cells:
  *
  *   <div class="o-grid">
- *     <div class="o-cell  o-cell--1of4  h-margin-left--auto"></div>
+ *     <div class="o-cell  o-cell--1of4  u-margin-left--auto"></div>
  *   </div>
  *
  * This will place cell at the end of X axis. More information about aligning
@@ -161,6 +161,7 @@ $grid-gap         = $unit-xs
  */
 
 for $order in 1..$grid-max-columns
+  
   .o-cell--order-{$order}
     order $order
 
@@ -214,7 +215,7 @@ widths($grid-max-columns)
 
 
 /*
- * If we have breakpoints defined (at `breakpoint.settings.styl`), automatically
+ * If we have breakpoints defined (at `_breakpoint.config.styl`), automatically
  * generate grid system for each of them and give them a responsive suffix,
  * e.g.:
  *

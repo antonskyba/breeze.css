@@ -13,28 +13,28 @@
 /* Font Size Helpers
    ========================================================================== */
 
-.h-font-4x
+.u-font-4x
   font-size $font-size-4x !important
 
-.h-font-3x
+.u-font-3x
   font-size $font-size-3x !important
 
-.h-font-2x
+.u-font-2x
   font-size $font-size-2x !important
 
-.h-font-xl
+.u-font-xl
   font-size $font-size-xl !important
 
-.h-font-lg
+.u-font-lg
   font-size $font-size-lg !important
 
-.h-font-md
+.u-font-md
   font-size $font-size !important
 
-.h-font-sm
+.u-font-sm
   font-size $font-size-sm !important
 
-.h-font-xs
+.u-font-xs
   font-size $font-size-xs !important
 
 
@@ -49,26 +49,26 @@
  * allow for double stranded heading hierarchy, e.g. we semantically need an H2,
  * but we want it to be sized like an H1:
  *
- *   <h2 class="h-h1"></h2>
+ *   <h2 class="u-h1"></h2>
  * 
  */
 
-.h-h1
+.u-h1
   font-size $h1-font-size !important
 
-.h-h2
+.u-h2
   font-size $h2-font-size !important
 
-.h-h3
+.u-h3
   font-size $h3-font-size !important
 
-.h-h4
+.u-h4
   font-size $h4-font-size !important
 
-.h-h5
+.u-h5
   font-size $h5-font-size !important
 
-.h-h6
+.u-h6
   font-size $h6-font-size !important
 
 
@@ -78,25 +78,25 @@
 /* Color Helpers
    ========================================================================== */
 
-.h-color-primary
+.u-color-primary
   color $color-primary !important
 
-.h-color-accent
+.u-color-accent
   color $color-accent !important
 
-.h-color-success
+.u-color-success
   color $color-success !important
   
-.h-color-warning
+.u-color-warning
   color $color-warning !important
 
-.h-color-danger
+.u-color-danger
   color $color-danger !important
 
-.h-color-hint
+.u-color-hint
   color $color-hint !important
   
-.h-color-disabled
+.u-color-disabled
   color $color-disabled !important
 
 
@@ -109,15 +109,15 @@
 /*
  * Generate `text-align` classes:
  *
- *   .h-text-left
- *   .h-text-center
- *   .h-text-right
- *   .h-text-justify
+ *   .u-text-left
+ *   .u-text-center
+ *   .u-text-right
+ *   .u-text-justify
  */
 
 for $align in left center right justify
   
-  .h-text-{$align}
+  .u-text-{$align}
     text-align $align !important
 
 
@@ -125,19 +125,19 @@ for $align in left center right justify
  * Text wrapping.
  */
 
-.h-text-nowrap
+.u-text-nowrap
   white-space nowrap !important
 
 
 /*
  * Generate `text-transform` classes:
  *
- *   .h-text-lowercase
- *   .h-text-uppercase
- *   .h-text-capitalize
+ *   .u-text-lowercase
+ *   .u-text-uppercase
+ *   .u-text-capitalize
  */
 
 for $transform in lowercase uppercase capitalize
   
-  .h-text-{$transform}
+  .u-text-{$transform}
     text-transform $transform !important
