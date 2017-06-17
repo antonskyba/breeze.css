@@ -193,7 +193,7 @@ widths($columns, $breakpoint-name = null)
           width s("calc(%s - %s)", $cell-width, ($grid-gap * 2))
           
           // Define full-width cells in grid with the `flush` modifier.
-          /.o-grid--flush &
+          /.o-grid--flush > &
             width $cell-width
         
         if $breakpoint-name    
