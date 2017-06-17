@@ -78,15 +78,15 @@ $css-path = '/'
 // Global settings files that contain project-wide variables; things that need
 // to be made available to the entire codebase.
 
-@import $css-path + 'settings/config.settings'
-@import $css-path + 'settings/ratio.settings'
-@import $css-path + 'settings/core.settings'
-@import $css-path + 'settings/breakpoint.settings'
-@import $css-path + 'settings/palette.settings'
-@import $css-path + 'settings/color.settings'
-@import $css-path + 'settings/font.settings'
-@import $css-path + 'settings/animation.settings'
-@import $css-path + 'settings/other.settings'
+@import $css-path + 'settings/_config.settings'
+@import $css-path + 'settings/_ratio.settings'
+@import $css-path + 'settings/_core.settings'
+@import $css-path + 'settings/_breakpoint.settings'
+@import $css-path + 'settings/_palette.settings'
+@import $css-path + 'settings/_color.settings'
+@import $css-path + 'settings/_font.settings'
+@import $css-path + 'settings/_animation.settings'
+@import $css-path + 'settings/_other.settings'
 
 
 
@@ -98,9 +98,9 @@ $css-path = '/'
 // Globally used mixins and functions. Additional libs can be imported and
 // initialized there.
 
-@import $css-path + 'tools/button.tools'
-@import $css-path + 'tools/form.tools'
-@import $css-path + 'tools/type.tools'
+@import $css-path + 'tools/_button.tools'
+@import $css-path + 'tools/_form.tools'
+@import $css-path + 'tools/_type.tools'
 
 
 
@@ -114,10 +114,10 @@ $css-path = '/'
  * definition, etc. This is the first layer which generates actual CSS.   
  */
 
-@import $css-path + 'generic/box-sizing.generic'
-@import $css-path + 'generic/normalize.generic'
-@import $css-path + 'generic/reset.generic'
-@import $css-path + 'generic/shared.generic'
+@import $css-path + 'generic/_box-sizing.generic'
+@import $css-path + 'generic/_normalize.generic'
+@import $css-path + 'generic/_reset.generic'
+@import $css-path + 'generic/_shared.generic'
 
 
 
@@ -131,12 +131,12 @@ $css-path = '/'
  * default styling from the browser so we can redefine them there.
  */
 
-@import $css-path + 'elements/page.elements'
-@import $css-path + 'elements/type.elements'
-@import $css-path + 'elements/button.elements'
-@import $css-path + 'elements/form.elements'
-@import $css-path + 'elements/image.elements'
-@import $css-path + 'elements/table.elements'
+@import $css-path + 'elements/_page.elements'
+@import $css-path + 'elements/_type.elements'
+@import $css-path + 'elements/_button.elements'
+@import $css-path + 'elements/_form.elements'
+@import $css-path + 'elements/_image.elements'
+@import $css-path + 'elements/_table.elements'
 
 
 
@@ -150,10 +150,10 @@ $css-path = '/'
  * patterns. 
  */
 
-@import $css-path + 'objects/block.objects'
-@import $css-path + 'objects/grid.objects'
-@import $css-path + 'objects/wrapper.objects'
-@import $css-path + 'objects/table.objects'
+@import $css-path + 'objects/_block.objects'
+@import $css-path + 'objects/_grid.objects'
+@import $css-path + 'objects/_wrapper.objects'
+@import $css-path + 'objects/_table.objects'
 
 
 
@@ -167,7 +167,7 @@ $css-path = '/'
  * components/chunks of UI are injected.
  */
 
-@import $css-path + 'components/example.button.components'
+@import $css-path + 'components/_example.button.components'
 
 
 
@@ -181,9 +181,9 @@ $css-path = '/'
  * before.
  */
 
-@import $css-path + 'helpers/accessibility.helpers'
-@import $css-path + 'helpers/box-model.helpers'
-@import $css-path + 'helpers/flexbox.helpers'
-@import $css-path + 'helpers/type.helpers'
-@import $css-path + 'helpers/print.helpers'
-@import $css-path + 'helpers/debug.helpers'
+@import $css-path + 'helpers/_accessibility.helpers'
+@import $css-path + 'helpers/_box-model.helpers'
+@import $css-path + 'helpers/_flexbox.helpers'
+@import $css-path + 'helpers/_type.helpers'
+@import $css-path + 'helpers/_print.helpers'
+@import $css-path + 'helpers/_debug.helpers'
