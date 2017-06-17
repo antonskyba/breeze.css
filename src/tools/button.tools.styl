@@ -14,9 +14,11 @@ button-color($background-color, $text-color = null)
 
   &:hover
     background-color mix($background-color, #FFFFFF, 80%)
+    color @color
 
   &:active
     background-color mix($background-color, #000000, 80%)
+    color @color
 
 
 // Apply styles for disabled buttons.
@@ -32,3 +34,4 @@ button-disabled($background-color, $text-color = null)
   &:focus,
   &:active
     background-color @background-color
+    color @color
