@@ -7,7 +7,7 @@
 // Set button's background & color, including `:hover` and `:active` states.
 
 button-color($background-color, $text-color = null)
-  $text-color = (light($background-color) ? $color : white) unless $text-color
+  $text-color = (light($background-color) ? $body-color : white) unless $text-color
 
   background-color $background-color
   color $text-color
@@ -22,7 +22,7 @@ button-color($background-color, $text-color = null)
 // Apply styles for disabled buttons.
 
 button-disabled($background-color, $text-color = null)
-  $text-color = (light($background-color) ? $color : white) unless $text-color
+  $text-color = (light($background-color) ? $body-color : white) unless $text-color
 
   background-color $background-color
   color $text-color

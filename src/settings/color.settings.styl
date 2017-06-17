@@ -51,22 +51,23 @@ black   = palette(Black)
 // 3. Colors that are used to indicate different states. You can add more states
 //    like `active`, `disabled`, etc.
 
-$primary = palette(Indigo) // [1]
-$accent  = palette(Pink, 'A200') // [2]
+$color-primary = palette(Indigo) // [1]
+$color-accent  = palette(Pink, 'A200') // [2]
 
-$success = green // [3]
-$warning = palette(Yellow, '700') // [3]
-$danger  = red // [3]
-
-
+$color-success = green // [3]
+$color-warning = palette(Yellow, '700') // [3]
+$color-danger  = red // [3]
 
 
 
-// Miscellaneous Color Settings
+
+
+// Color Settings
 // =============================================================================
 
 // 1. Used in `text-selection()` tool to set the text highlight color.
 
+$body-color         = palette(Black, 'Text')
 $link-color         = $accent
 $hint-color         = palette(Black, 'Hint Text')
 $highlight-bg-color = palette(Grey, '500') // [1]
