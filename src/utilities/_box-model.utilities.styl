@@ -18,12 +18,12 @@
  * The below code will generate a suite of classes like:
  *
  *   .u-margin-bottom
- *   .u-margin-right--xl
- *   .u-margin-top--auto
- *   .u-margin--auto
- *   .u-padding-top--sm
+ *   .u-margin-right-xl
+ *   .u-margin-top-auto
+ *   .u-margin-auto
+ *   .u-padding-top-sm
  *   .u-padding
- *   .u-padding--0
+ *   .u-padding-0
  */
 
 $spacing-properties = {
@@ -40,31 +40,31 @@ $spacing-directions = {
 }
 
 $spacing-sizes = {
-  '--auto': auto,
-  '--4s':   $unit-4s,
-  '--3s':   $unit-3s,
-  '--2s':   $unit-2s,
-  '--xs':   $unit-xs,
-  '--sm':   $unit-sm,
+  '-auto': auto,
+  '-4s':   $unit-4s,
+  '-3s':   $unit-3s,
+  '-2s':   $unit-2s,
+  '-xs':   $unit-xs,
+  '-sm':   $unit-sm,
   '':       $unit,
-  '--lg':   $unit-lg,
-  '--xl':   $unit-xl,
-  '--2x':   $unit-2x,
-  '--3x':   $unit-3x,
-  '--4x':   $unit-4x,
-  '--0':    0
+  '-lg':   $unit-lg,
+  '-xl':   $unit-xl,
+  '-2x':   $unit-2x,
+  '-3x':   $unit-3x,
+  '-4x':   $unit-4x,
+  '-0':    0
 }
 
 for $property, $property-name in $spacing-properties
-  
+
   for $direction, $direction-name in $spacing-directions
-    
+
     for $size, $value in $spacing-sizes
-    
+
       unless $property-name is 'padding' and $value is 'auto'
-      
+
         .u-{$property}{$direction}
-          
+
           &{$size}
             {$property-name}{$direction-name}: $value !important
 
@@ -77,6 +77,6 @@ for $property, $property-name in $spacing-properties
 
 .u-width-100
   width 100% !important
-  
+
 .u-height-100
   height 100% !important
