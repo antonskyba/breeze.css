@@ -34,6 +34,7 @@
  * Button...............Buttons tools.
  * Form.................Form tools.
  * Type.................Type tools.
+ * Border...............Border/border radius tools.
  *
  * GENERIC
  * Box-sizing...........Slightly better box-sizing practice.
@@ -73,11 +74,11 @@
 
 
 
-$css-path = '/' 
+$css-path = '/'
 
 // Config
 // =============================================================================
-   
+
 // Global settings files that contain project-wide variables; things that need
 // to be made available to the entire codebase.
 
@@ -103,6 +104,7 @@ $css-path = '/'
 @import $css-path + 'functions/_button.functions'
 @import $css-path + 'functions/_form.functions'
 @import $css-path + 'functions/_type.functions'
+@import $css-path + 'functions/_border.functions'
 
 
 
@@ -111,9 +113,9 @@ $css-path = '/'
 /* Generic
  * ========================================================================== */
 
-/*   
+/*
  * Low-specific & far-reaching rulesets: reset, normalize, box-sizing
- * definition, etc. This is the first layer which generates actual CSS.   
+ * definition, etc. This is the first layer which generates actual CSS.
  */
 
 @import $css-path + 'generic/_box-sizing.generic'
@@ -148,8 +150,8 @@ $css-path = '/'
  * ========================================================================== */
 
 /*
- * Class-based selectors which define objects, abstractions, and design 
- * patterns. 
+ * Class-based selectors which define objects, abstractions, and design
+ * patterns.
  */
 
 @import $css-path + 'objects/_block.objects'
