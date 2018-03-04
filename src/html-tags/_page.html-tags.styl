@@ -14,7 +14,7 @@ text-selection($highlight-bg-color, white)
 /*
  * 1. Force scrollbars to always be visible to prevent `jumps` when
  *    navigating between pages that do/do not have enough content to produce
- *    scrollbars naturally. 
+ *    scrollbars naturally.
  * 2. Set `font-size` of the <html> element to 62.5% of default font size
  *    equal to 16px, which equates to 10px (or .625em). Therefore we can use
  *    `rem` or `em` units for any element simpy dividing pixel value by 10. For
@@ -44,3 +44,5 @@ body
   height 100%
   font $font-size/$line-height $font-family-primary
   color $body-color
+  word-break break-word
+  word-wrap break-word
