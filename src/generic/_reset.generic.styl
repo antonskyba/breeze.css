@@ -47,7 +47,7 @@ button,
 input,
 optgroup,
 select,
-textarea 
+textarea
   font-family $font-family-primary
   font-size 1em
 
@@ -90,11 +90,12 @@ fieldset
  * Remove spinner button of number picker input elements.
  */
 
-input::-webkit-inner-spin-button, 
+input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button
   appearance none
 
 input[type="number"]
+  -moz-appearance textfield
   appearance textfield
 
 

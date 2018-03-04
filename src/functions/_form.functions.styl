@@ -10,17 +10,35 @@
 // =============================================================================
 
 // Style textfields's placeholder for all browsers.
+//
+// 1. Fix for iOS Safari.
+// 2. Fix for Firefox.
 
-placeholder()
+placeholder($placeholder-color, $placeholder-disabled-color = false)
 
   &::-webkit-input-placeholder
-    {block}
-
-  &:-moz-placeholder
-    {block}
+    color $placeholder-color
+    -webkit-text-fill-color $placeholder-color // [1]
 
   &::-moz-placeholder
-    {block}
+    color $placeholder-color
+    opacity 1 // [2]
 
   &:-ms-input-placeholder
-    {block}
+    color $placeholder-color
+
+
+  if $placeholder-disabled-color
+
+    &[disabled]
+
+      &::-webkit-input-placeholder
+        color $placeholder-disabled-color
+        -webkit-text-fill-color $placeholder-disabled-color // [1]
+
+      &::-moz-placeholder
+        color $placeholder-disabled-color
+        opacity .54 // [2]
+
+      &:-ms-input-placeholder
+        color $placeholder-disabled-color

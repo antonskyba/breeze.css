@@ -2,7 +2,7 @@
 // COLOR
 // =============================================================================
 
-// Project's color assignments. 
+// Project's color assignments.
 
 
 
@@ -43,7 +43,7 @@ black   = palette(Black)
 // Brand Colors
 // =============================================================================
 
-// 1. Color that is displayed most frequently across project's screens and 
+// 1. Color that is displayed most frequently across project's screens and
 //    components.
 // 2. Color that is used to accent select parts of the UI. It can be
 //    complementary or analogous to the primary color, but it should not simply
@@ -111,6 +111,8 @@ $color-disabled     = palette(Black, 'Disabled Text')
 
 // 1. Used in `text-selection()` tool to set the text highlight color.
 
-$body-color         = palette(Black, 'Text')
-$link-color         = $accent
-$highlight-bg-color = palette(Grey, '500') // [1]
+$body-color                 = palette(Black, 'Text')
+$link-color                 = $accent
+$highlight-bg-color         = palette(Grey, '500') // [1]
+$placeholder-color          = mix($color-hint, white, 80%)
+$placeholder-disabled-color = $placeholder-color
