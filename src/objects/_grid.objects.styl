@@ -33,7 +33,7 @@
  *   <div class="o-grid  o-grid--reverse">
  *
  * This will reverse the displayed order of the system so that it runs in the
- * opposite order to our source, effectively flipping the system over. 
+ * opposite order to our source, effectively flipping the system over.
  *
  * Also, both grid and cells can be complemented with the helper classes, e.g.:
  *
@@ -49,7 +49,7 @@
  *
  * This will place cell at the end of X axis. More information about aligning
  * with `auto` margins: https://www.w3.org/TR/css-flexbox-1/#auto-margins.
- * 
+ *
  * There are several more options available: explore them below.
  */
 
@@ -87,18 +87,14 @@ $grid-gap         = $unit-xs
 /* Default/Mandatory Classes
    ========================================================================== */
 
-/*
- * 1. Allows us to use the layout object on any type of element.
- * 2. Stretch cells to fit the grid.
- */
-
 .o-grid
-  display flex /* [1] */
+  display flex
   flex-flow row wrap
-  align-items stretch /* [2] */
+  align-items stretch
+  align-content flex-start
   padding $grid-gap
   margin 0 auto
-  list-style none /* [1] */
+  list-style none
 
 
 /*
@@ -124,7 +120,8 @@ $grid-gap         = $unit-xs
 
 .o-grid--flush
   padding 0
-  
+
+
   > .o-cell
     width 100%
     margin 0
@@ -161,7 +158,7 @@ $grid-gap         = $unit-xs
  */
 
 for $order in 1..$grid-max-columns
-  
+
   .o-cell--order-{$order}
     order $order
 
@@ -182,23 +179,23 @@ widths($columns, $breakpoint-name = null)
 
   // Loop through the number of columns for each denominator of our fractions.
   for $denominator in 1..$columns
-    
+
     // Begin creating a numerator for our fraction up until we hit the
     // denominator.
     for $numerator in 1..$denominator
-        
+
         $cell-width = percentage($numerator / $denominator)
-        
+
         // Build a class in the format `.o-cell--3of4-[breakpoint]`.
         .o-cell--{$numerator}{$widths-delimiter}{$denominator}{$breakpoint-name}
           width s('calc(%s - %s)', $cell-width, ($grid-gap * 2))
-          
+
           // Define full-width cells in grid with the `flush` modifier.
           /.o-grid--flush > &
             width $cell-width
-        
-        if $breakpoint-name    
-          
+
+        if $breakpoint-name
+
           // Build order override classes for different screen resolutions.
           .o-cell--order-{$denominator}{$breakpoint-name}
             order $denominator
@@ -223,9 +220,9 @@ widths($grid-max-columns)
  */
 
 if $breakpoints
-  
+
   for $breakpoint-name, $breakpoint-value in $breakpoints
-    
+
     +at($breakpoint-name)
-      
+
       widths($grid-max-columns, $breakpoint-separator + $breakpoint-name)
