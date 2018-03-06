@@ -11,7 +11,7 @@
 /*
  * Apply default font-size for headings 1 through 6. Anything more opinionated
  * than simple font-size changes should likely be applied via classes (see:
- * csswizardry.com/2016/02/managing-typography-on-large-apps). 
+ * csswizardry.com/2016/02/managing-typography-on-large-apps).
  */
 
 h1
@@ -33,6 +33,16 @@ h6
   font-size $h6-font-size
 
 
+h1,
+h2,
+h3,
+h4,
+h5
+
+  small
+    font-size $unit-em-xs
+
+
 /*
  * 1. Offset link from surrounding text.
  * 2. Remove link's underline.
@@ -46,7 +56,7 @@ a
 
 /*
  * 1. Apply default monospace font to <pre> and phrase elements.
- * 2. Make text size 85% of surrounding text — optimal for code elements.
+ * 2. Make text size is 0.85x of surrounding text — optimal for code elements.
  */
 
 pre,
