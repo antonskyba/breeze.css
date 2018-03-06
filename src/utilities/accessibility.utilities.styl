@@ -1,0 +1,95 @@
+/* ==========================================================================
+   ACCESSIBILITY
+   ========================================================================== */
+
+/*
+ * Helper classes that control content's accessibility.
+ */
+
+
+
+// A mixin for building accessibility classes. You can run it without arguments,
+// or optionally pass it suffix for responsive classes. E.g. to create
+// classes for a small breakpoint:
+//
+//   visibilities('-mobile')
+
+visibilities($breakpoint-name = null)
+
+  // Hide an element and remove it from the layout flow.
+
+  .u-hidden{$breakpoint-name}
+    display none !important
+
+
+  // Hide an element but leave it in the layout flow.
+
+  .u-invisible{$breakpoint-name}
+    visibility hidden !important
+
+
+/*
+ * Automatically generate accessibility helper classes:
+ *
+ *   .u-hidden
+ *   .u-invisible
+ */
+
+visibilities()
+
+
+/*
+ * If we have breakpoints defined (at `breakpoint.settings.styl`), generate
+ * accessibility classes for each of them and give them a responsive suffix,
+ * e.g.:
+ *
+ *   .u-hidden-desktop
+ *   .u-invisible-mobile
+ */
+
+if $breakpoints
+
+  for $breakpoint-name, $breakpoint-value in $breakpoints
+
+    +at($breakpoint-name)
+
+      visibilities($breakpoint-separator + $breakpoint-name)
+
+
+/*
+ * Generate `display` shorthand classes, like:
+ *
+ *   .u-block
+ *   .u-inline
+ *   .u-inline-block
+ */
+
+for $display-value in block inline inline-block
+
+  .u-{$display-value}
+    display $display-value !important
+
+
+/*
+ * Make element hidden and opaque — used to create show/hide transitions.
+ */
+
+.u-transparent
+  visibility hidden !important
+  opacity 0 !important
+
+
+
+
+
+/* Common Display Types
+   ========================================================================== */
+
+.u-inline
+  display inline !important
+
+.u-block
+  display block !important
+
+.u-inline-block
+  display inline-block !important

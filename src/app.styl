@@ -1,8 +1,6 @@
-/* ========================================================================== *
- *                                                                            *
- *                                 BREEZE.CSS                                 *
- *                                                                            *
- * ========================================================================== */
+/* ==========================================================================
+   BREEZE.CSS
+   ========================================================================== */
 
 /*
  * Breeze.css, by @antonskyba
@@ -15,14 +13,14 @@
 
 
 
-/* CONTENTS
+/* Contents
  * ========================================================================== */
 
 /*
- * SETTINGS
+ * CONFIG
  * Config...............Project-level configuration and feature switches.
- * Ratio................Ratios that can be used to produce spacing values.
- * Core.................Most important setup variables, such as Base Unit and
+ * Ratios...............Ratios that can be used to produce spacing values.
+ * Base.................Most important setup variables, such as Base Unit and
  *                      Base Ratio.
  * Breakpoint...........Breakpoints at which layout changes adapting to
  *                      different screen sizes.
@@ -32,10 +30,12 @@
  * Animation............Custom animation timing functions, ported from Axis.
  * Other................Miscellaneous project-wide variables.
  *
- * TOOLS
+ * FUNCTIONS
  * Button...............Buttons tools.
  * Form.................Form tools.
  * Type.................Type tools.
+ * Border...............Border/border radius tools.
+ * Outline..............Outline tools.
  *
  * GENERIC
  * Box-sizing...........Slightly better box-sizing practice.
@@ -43,31 +43,29 @@
  * Reset................Simple reset that complements Normalize.css.
  * Shared...............Shared declarations for certain elements.
  *
- * ELEMENTS
+ * HTML-TAGS
  * Page.................Base styles for page-level elements.
- * Link.................Simple styles for <a> element.
- * Heading..............Very minimal (i.e. only font-size sets) styles for
- *                      headings.
- * Type.................Default styles for text elements.
+ * Type.................Default styles for text elements: headings, link, etc.
  * Button...............Default button styles.
  * Form.................Base form styles (for <input>, <textarea>, etc).
  * Image................Base image styles.
- * Table................Simple table styles.
+ * Table................Base table styles.
  *
  * OBJECTS
- * Heading..............Headings classes to separate semantics from styling.
+ * Block................Simple block object with consistent bottom gap.
  * Grid.................Grid module.
  * Wrapper..............Page constraint object.
  * Table................Simple object for manipulating the structure of <table>.
  *
- * COMPONENTS
+ * UI-COMPONENTS
  * Button...............An example button component, and how it fits into the
  *                      Breeze framework.
  *
- * HELPERS
+ * UTILITIES
  * Accessibility........Helper classes that control content's accessibility.
  * Box-model............Utility classes to put box-model values onto elements.
  * Flexbox..............Helper classes to set and control Flexbox container.
+ * Type.................Text & font helper classes.
  * Print................Print styles that optimize the printing process and make
  *                      the printed pages easier to read.
  * Debug................Styles to make debugging easier.
@@ -77,48 +75,49 @@
 
 
 
-$css-path = '/' 
+$css-path = '/'
 
-// SETTINGS
+// Config
 // =============================================================================
-   
+
 // Global settings files that contain project-wide variables; things that need
 // to be made available to the entire codebase.
 
-@import $css-path + 'settings/config.settings'
-@import $css-path + 'settings/ratio.settings'
-@import $css-path + 'settings/core.settings'
-@import $css-path + 'settings/breakpoint.settings'
-@import $css-path + 'settings/palette.settings'
-@import $css-path + 'settings/color.settings'
-@import $css-path + 'settings/font.settings'
-@import $css-path + 'settings/animation.settings'
-@import $css-path + 'settings/other.settings'
+@import $css-path + 'config/_config.config'
+@import $css-path + 'config/_ratios.config'
+@import $css-path + 'config/_base.config'
+@import $css-path + 'config/_breakpoint.config'
+@import $css-path + 'config/_palette.config'
+@import $css-path + 'config/_color.config'
+@import $css-path + 'config/_font.config'
+@import $css-path + 'config/_animation.config'
+@import $css-path + 'config/_other.config'
 
 
 
 
 
-// TOOLS
+// Functions
 // =============================================================================
 
-// Globally used mixins and functions. Additional libs can be imported and
-// initialized there.
+// Globally used functions and mixins.
 
-@import $css-path + 'tools/button.tools'
-@import $css-path + 'tools/form.tools'
-@import $css-path + 'tools/type.tools'
-
-
-
+@import $css-path + 'functions/_button.functions'
+@import $css-path + 'functions/_form.functions'
+@import $css-path + 'functions/_type.functions'
+@import $css-path + 'functions/_border.functions'
+@import $css-path + 'functions/_outline.functions'
 
 
-/* GENERIC
+
+
+
+/* Generic
  * ========================================================================== */
 
-/*   
+/*
  * Low-specific & far-reaching rulesets: reset, normalize, box-sizing
- * definition, etc. This is the first layer which generates actual CSS.   
+ * definition, etc. This is the first layer which generates actual CSS.
  */
 
 @import $css-path + 'generic/box-sizing.generic'
@@ -130,7 +129,7 @@ $css-path = '/'
 
 
 
-/* ELEMENTS
+/* HTML Tags
  * ========================================================================== */
 
 /*
@@ -138,28 +137,26 @@ $css-path = '/'
  * default styling from the browser so we can redefine them there.
  */
 
-@import $css-path + 'elements/page.elements'
-@import $css-path + 'elements/link.elements'
-@import $css-path + 'elements/heading.elements'
-@import $css-path + 'elements/type.elements'
-@import $css-path + 'elements/button.elements'
-@import $css-path + 'elements/form.elements'
-@import $css-path + 'elements/image.elements'
-@import $css-path + 'elements/table.elements'
+@import $css-path + 'html-tags/page.html-tags'
+@import $css-path + 'html-tags/type.html-tags'
+@import $css-path + 'html-tags/button.html-tags'
+@import $css-path + 'html-tags/form.html-tags'
+@import $css-path + 'html-tags/image.html-tags'
+@import $css-path + 'html-tags/table.html-tags'
 
 
 
 
 
-/* OBJECTS
+/* Objects
  * ========================================================================== */
 
 /*
- * Class-based selectors which define objects, abstractions, and design 
- * patterns. 
+ * Class-based selectors which define objects, abstractions, and design
+ * patterns.
  */
 
-@import $css-path + 'objects/heading.objects'
+@import $css-path + 'objects/block.objects'
 @import $css-path + 'objects/grid.objects'
 @import $css-path + 'objects/wrapper.objects'
 @import $css-path + 'objects/table.objects'
@@ -168,7 +165,7 @@ $css-path = '/'
 
 
 
-/* COMPONENTS
+/* UI Components
  * ========================================================================== */
 
 /*
@@ -176,13 +173,13 @@ $css-path = '/'
  * components/chunks of UI are injected.
  */
 
-@import $css-path + 'components/example.button.components'
+@import $css-path + 'ui-components/example.button.ui-components'
 
 
 
 
 
-/* HELPERS
+/* Utilities
  * ========================================================================== */
 
 /*
@@ -190,8 +187,9 @@ $css-path = '/'
  * before.
  */
 
-@import $css-path + 'helpers/accessibility.helpers'
-@import $css-path + 'helpers/box-model.helpers'
-@import $css-path + 'helpers/flexbox.helpers'
-@import $css-path + 'helpers/print.helpers'
-@import $css-path + 'helpers/debug.helpers'
+@import $css-path + 'utilities/accessibility.utilities'
+@import $css-path + 'utilities/box-model.utilities'
+@import $css-path + 'utilities/flexbox.utilities'
+@import $css-path + 'utilities/type.utilities'
+@import $css-path + 'utilities/print.utilities'
+@import $css-path + 'utilities/debug.utilities'

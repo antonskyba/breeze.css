@@ -1,0 +1,79 @@
+/* ==========================================================================
+   TYPE
+   ========================================================================== */
+
+/*
+ * Default styles for text elements: headings, link, phrase elements, etc.
+ */
+
+
+
+/*
+ * Apply default font-size for headings 1 through 6. Anything more opinionated
+ * than simple font-size changes should likely be applied via classes (see:
+ * csswizardry.com/2016/02/managing-typography-on-large-apps).
+ */
+
+h1
+  font-size $h1-font-size
+
+h2
+  font-size $h2-font-size
+
+h3
+  font-size $h3-font-size
+
+h4
+  font-size $h4-font-size
+
+h5
+  font-size $h5-font-size
+
+h6
+  font-size $h6-font-size
+
+
+h1,
+h2,
+h3,
+h4,
+h5
+
+  small
+    font-size $unit-em-xs
+
+
+/*
+ * 1. Offset link from surrounding text.
+ * 2. Remove link's underline.
+ */
+
+a
+  font-weight bold /* [1] */
+  color $link-color /* [1] */
+  text-decoration none /* [2] */
+
+
+/*
+ * 1. Apply default monospace font to <pre> and phrase elements.
+ * 2. Make text size is 0.85x of surrounding text — optimal for code elements.
+ */
+
+pre,
+code,
+kbd,
+samp
+  font-family $font-family-monospace /* [1] */
+  font-size .85em /* [2] */
+
+
+/*
+ * Make size of small text elements always be slightly smaller than surrounding
+ * text.
+ */
+
+sup,
+sub,
+small,
+figcaption
+  font-size (1em / $base-ratio)

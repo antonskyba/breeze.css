@@ -3,8 +3,8 @@
    ========================================================================== */
 
 /*
- * This is an example component. Extend styles by building your own components
- * that make up your UI. Component classes are prefixed with a `c-`.
+ * HINT: this is an example component. Extend styles by building your own
+ * components that make up your UI. Component classes are prefixed with a `c-`.
  */
 
 
@@ -16,7 +16,7 @@
 .c-btn
   button-color(palette(Grey, '200'))
   flex-shrink 0
-  min-width 7em /* [1] */
+  min-width 3em /* [1] */
   padding 1em /* [1] */
   border none
   border-radius $global-radius
@@ -25,8 +25,8 @@
   text-transform uppercase
   letter-spacing .05em /* [1] */
   transition $global-duration
-  
-  &[disabled="disabled"]
+
+  &[disabled]
     button-disabled(palette(Grey, '400'))
 
 
@@ -39,11 +39,11 @@
 .c-btn
 
   &--primary
-    button-color($primary)
+    button-color($color-primary)
 
 
   &--accent
-    button-color($accent, white)
+    button-color($color-accent, white)
 
 
 
@@ -53,7 +53,7 @@
    ========================================================================== */
 
 .c-btn
-  
+
   &--sm
     font-size $font-size-xs
 

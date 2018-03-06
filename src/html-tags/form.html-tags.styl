@@ -8,8 +8,9 @@
  * Set color to placeholder.
  */
 
-+placeholder()
-  color $hint-color
+input,
+textarea
+  placeholder($placeholder-color, $placeholder-disabled-color)
 
 
 /*
@@ -18,6 +19,16 @@
 
 input[placeholder]
   text-overflow ellipsis
+
+
+/*
+ * Truncate text to the width of field using ellipsis.
+ */
+
+input,
+textarea
+  text-overflow ellipsis
+  overflow hidden
 
 
 /*

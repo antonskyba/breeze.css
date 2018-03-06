@@ -1,0 +1,51 @@
+// =============================================================================
+// TYPE
+// =============================================================================
+
+
+
+
+
+// Text-Selection
+// =============================================================================
+
+// Set custom text selection background & color.
+
+text-selection($bg-color = $highlight-bg-color, $text-color = null)
+  $text-color = (light($bg-color) ? $body-color : white) unless $text-color
+
+  &::-moz-selection
+    background $bg-color
+    color $text-color
+
+  &::selection
+    background $bg-color
+    color $text-color
+
+
+
+
+
+// Reset Text
+// =============================================================================
+
+// NOTE: it's safer to not reset `font-size`.
+//
+// 1. Fallback for where `start` is not supported.
+
+reset-text()
+  font-family $font-family-base
+  font-style normal
+  font-weight normal
+  letter-spacing normal
+  line-break auto
+  line-height $line-height-base
+  text-align left // [1]
+  text-align start
+  text-decoration none
+  text-shadow none
+  text-transform none
+  white-space normal
+  word-break normal
+  word-spacing normal
+  word-wrap normal
