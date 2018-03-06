@@ -34,7 +34,16 @@ $base-ratio = $perfect-fourth // [2]
 // Modular Scale is determined based on Base Unit and Base Ratio (defined
 // above).
 //
-// HINT: you're willing to make your own Modular Scale system: add one or more
+// Modular Scale is presented in two versions: with `em` units (first one) and
+// with `rem` units (second one). This makes units usage much more flexible:
+// values from Modular Scale with `rem` units are used most of the all, while
+// `em` values are used just in places where you need a specific size which
+// depends from `font-size` property. E.g. you need to set consistent
+// `padding-left` value which would be a multiplier of `font-size` and equal to
+// 0.75x of it. In such case, you can use `$unit-em-sm` variable instead of
+// `1em / $base-ratio`.
+//
+// HINT: you're free to make your own Modular Scale system: add one or more
 // ratios/bases (therefore you will get more numbers to your scale), multiply
 // instead of raising to a power, or use another set of coefficients, e.g.:
 //
@@ -43,16 +52,39 @@ $base-ratio = $perfect-fourth // [2]
 //   — Fibonacci numbers: 1 2 5 8 13.
 
 $multipliers = 1 2 3 4 5
+
+
+// Modular Scale [em]
+
+$unit-em-lg  = round(1em * ($base-ratio ** $multipliers[0]), 3) // 1.333em
+$unit-em-xl  = round(1em * ($base-ratio ** $multipliers[1]), 3) // 1.777em
+$unit-em-2x  = round(1em * ($base-ratio ** $multipliers[2]), 3) // 2.369em
+$unit-em-3x  = round(1em * ($base-ratio ** $multipliers[3]), 3) // 3.157em
+$unit-em-4x  = round(1em * ($base-ratio ** $multipliers[4]), 3) // 4.209em
+
+$unit-em-sm  = round(1em / ($base-ratio ** $multipliers[0]), 3) // 0.750em
+$unit-em-xs  = round(1em / ($base-ratio ** $multipliers[1]), 3) // 0.563em
+$unit-em-2s  = round(1em / ($base-ratio ** $multipliers[2]), 3) // 0.422em
+$unit-em-3s  = round(1em / ($base-ratio ** $multipliers[3]), 3) // 0.317em
+$unit-em-4s  = round(1em / ($base-ratio ** $multipliers[4]), 3) // 0.238em
+
+
+// Convert Base Unit value to `rem`. This will be multiplied by each unit value
+// from the above set to get the same system but `rem` measured.
+
 $unit        = unit($base-unit / 10, 'rem')
 
-$unit-lg     = round($unit * ($base-ratio ** $multipliers[0]), 1) // 2.1rem
-$unit-xl     = round($unit * ($base-ratio ** $multipliers[1]), 1) // 2.8rem
-$unit-2x     = round($unit * ($base-ratio ** $multipliers[2]), 1) // 3.8rem
-$unit-3x     = round($unit * ($base-ratio ** $multipliers[3]), 1) // 5.1rem
-$unit-4x     = round($unit * ($base-ratio ** $multipliers[4]), 1) // 6.7rem
 
-$unit-sm     = round($unit / ($base-ratio ** $multipliers[0]), 1) // 1.2rem
-$unit-xs     = round($unit / ($base-ratio ** $multipliers[1]), 1) // 0.9rem
-$unit-2s     = round($unit / ($base-ratio ** $multipliers[2]), 1) // 0.7rem
-$unit-3s     = round($unit / ($base-ratio ** $multipliers[3]), 1) // 0.5rem
-$unit-4s     = round($unit / ($base-ratio ** $multipliers[4]), 1) // 0.4rem
+// Modular Scale [rem]
+
+$unit-lg     = round($unit * $unit-em-lg, 1) // 2.1rem
+$unit-xl     = round($unit * $unit-em-xl, 1) // 2.8rem
+$unit-2x     = round($unit * $unit-em-2x, 1) // 3.8rem
+$unit-3x     = round($unit * $unit-em-3x, 1) // 5.1rem
+$unit-4x     = round($unit * $unit-em-4x, 1) // 6.7rem
+
+$unit-sm     = round($unit * $unit-em-sm, 1) // 1.2rem
+$unit-xs     = round($unit * $unit-em-xs, 1) // 0.9rem
+$unit-2s     = round($unit * $unit-em-2s, 1) // 0.7rem
+$unit-3s     = round($unit * $unit-em-3s, 1) // 0.5rem
+$unit-4s     = round($unit * $unit-em-4s, 1) // 0.4rem
