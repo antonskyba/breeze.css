@@ -64,4 +64,4 @@ Breeze is not available on Npm or Bower, therefore you have to download the sour
 
 2. Open `_base.config.styl` and choose your Base Unit and Base Ratio values. You will find a brief description of each of these units and few useful links that may help you to make a choice.
 
-> **Note:** Breeze uses most recent version of Normalize.css that is available during the latest major framework update, but if you want to get Normalize updates through Bower or Npm delete `_normalize.generic.styl`, add Normalize.css as a dependency to your project and import it to the `app.styl`.
+> **Note:** Breeze uses most recent version of Normalize.css that is available during the latest major framework update, but if you want to get Normalize updates through Bower or Npm delete `normalize.generic.styl`, add Normalize.css as a dependency to your project and import it to the `app.styl`.
