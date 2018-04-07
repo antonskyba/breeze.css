@@ -48,15 +48,9 @@ black   = palette(Black)
 // 2. Color that is used to accent select parts of the UI. It can be
 //    complementary or analogous to the primary color, but it should not simply
 //    be a light or dark variation of the primary color.
-// 3. Colors that are used to indicate different states. You can add more states
-//    like `active`, `disabled`, etc.
 
 $color-primary = palette(Indigo) // [1]
 $color-accent  = palette(Pink, 'A200') // [2]
-
-$color-success = green // [3]
-$color-warning = palette(Yellow, '700') // [3]
-$color-danger  = red // [3]
 
 
 
@@ -96,11 +90,14 @@ $color-accent-d75  = mix(black, $color-accent, $tint-grades[2])
 
 
 
-// Additional Colors
+// State Colors
 // =============================================================================
 
-$color-hint         = palette(Black, 'Hint Text')
-$color-disabled     = palette(Black, 'Disabled Text')
+$color-success  = green // [3]
+$color-warning  = palette(Yellow, '700') // [3]
+$color-danger   = red // [3]
+$color-hint     = palette(Black, 'Hint Text')
+$color-disabled = palette(Black, 'Disabled Text')
 
 
 
@@ -112,7 +109,7 @@ $color-disabled     = palette(Black, 'Disabled Text')
 // 1. Used in `text-selection()` tool to set the text highlight color.
 
 $body-color                 = palette(Black, 'Text')
-$link-color                 = $accent
+$link-color                 = $color-accent
 $highlight-bg-color         = palette(Grey, '500') // [1]
 $placeholder-color          = mix($color-hint, white, 80%)
 $placeholder-disabled-color = $placeholder-color
