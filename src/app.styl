@@ -31,6 +31,7 @@
  * Other................Miscellaneous project-wide variables.
  *
  * FUNCTIONS
+ * Accessibility........Functions that control content's accessibility.
  * Button...............Buttons tools.
  * Form.................Form tools.
  * Type.................Type tools.
@@ -66,6 +67,7 @@
  * Box-model............Utility classes to put box-model values onto elements.
  * Flexbox..............Helper classes to set and control Flexbox container.
  * Type.................Text & font helper classes.
+ * Position.............Position helper classes.
  * Print................Print styles that optimize the printing process and make
  *                      the printed pages easier to read.
  * Debug................Styles to make debugging easier.
@@ -102,6 +104,7 @@ $css-path = '/'
 
 // Globally used functions and mixins.
 
+@import $css-path + 'functions/_accessibility.functions'
 @import $css-path + 'functions/_button.functions'
 @import $css-path + 'functions/_form.functions'
 @import $css-path + 'functions/_type.functions'
@@ -191,5 +194,6 @@ $css-path = '/'
 @import $css-path + 'utilities/box-model.utilities'
 @import $css-path + 'utilities/flexbox.utilities'
 @import $css-path + 'utilities/type.utilities'
+@import $css-path + 'utilities/position.utilities'
 @import $css-path + 'utilities/print.utilities'
 @import $css-path + 'utilities/debug.utilities'
