@@ -93,9 +93,10 @@ $color-accent-d75  ?= mix(black, $color-accent, $tint-grades[2])
 // State Colors
 // =============================================================================
 
-$color-success  ?= green // [3]
-$color-warning  ?= palette(Yellow, '700') // [3]
-$color-danger   ?= red // [3]
+$color-success  ?= green
+$color-warning  ?= palette(Yellow, '700')
+$color-danger   ?= red
+
 $color-hint     ?= palette(Black, 'Hint Text')
 $color-disabled ?= palette(Black, 'Disabled Text')
 
@@ -110,6 +111,8 @@ $color-disabled ?= palette(Black, 'Disabled Text')
 
 $body-color                 ?= palette(Black, 'Text')
 $link-color                 ?= $color-accent
+
 $highlight-bg-color         ?= palette(Grey, '500') // [1]
+
 $placeholder-color          ?= mix($color-hint, white, 80%)
 $placeholder-disabled-color ?= $placeholder-color
