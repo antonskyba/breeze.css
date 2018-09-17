@@ -2,6 +2,29 @@
 // BORDER
 // =============================================================================
 
+// Tools for border.
+
+
+
+
+
+// Border Triangle
+// =============================================================================
+
+// Example usage:
+// 
+// border-triangle('top', 1rem, black)
+
+border-triangle($side, $size, $color)
+  width 0
+  height 0
+
+  for $border-side in 'left' 'right' 'top' 'bottom'
+    if $border-side != $side
+      border-{$border-side} $size solid transparent
+      
+  border-{$side} $size solid $color
+
 
 
 

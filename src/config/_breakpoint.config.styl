@@ -24,10 +24,10 @@ $breakpoints ?= {
 // Breakpoint separator used in responsive suffixes for the classes that depend
 // on screen resolution, e.g.:
 //
-//   .o-cell--2of3-mobile
-//   .u-hidden-desktop
+//   .o-cell--2/3@mobile
+//   .u-hidden@desktop
 
-$breakpoint-separator ?= '-'
+$breakpoint-separator ?= '\@'
 
 
 
@@ -45,14 +45,14 @@ $breakpoint-separator ?= '-'
 //      +above('tablet-l')
 //      +below('desktop')
 
-rupture.enable-em-breakpoints ?= true // [1]
-rupture.scale                 ?= values($breakpoints) // [2]
-rupture.scale-names           ?= keys($breakpoints) // [3]
+rupture.enable-em-breakpoints = true // [1]
+rupture.scale                 = values($breakpoints) // [2]
+rupture.scale-names           = keys($breakpoints) // [3]
 
 
 // Set variables for such mixins as `+mobile()`, `+tablet()`, `+desktop()` and
 // `+hd()`.
 
-rupture.mobile-cutoff         ?= $breakpoints.tablet-p
-rupture.desktop-cutoff        ?= $breakpoints.desktop
-rupture.hd-cutoff             ?= $breakpoints.hd
+rupture.mobile-cutoff         = $breakpoints.tablet-p
+rupture.desktop-cutoff        = $breakpoints.desktop
+rupture.hd-cutoff             = $breakpoints.hd

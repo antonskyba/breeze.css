@@ -8,8 +8,8 @@
  * and predefined margins and paddings. The grid system has the following view:
  *
  *   <div class="o-grid">
- *     <div class="o-cell  o-cell--1of4"></div>
- *     <div class="o-cell  o-cell--1of4"></div>
+ *     <div class="o-cell  o-cell--1/4"></div>
+ *     <div class="o-cell  o-cell--1/4"></div>
  *   </div>
  *
  * The above will create a four-column structure in which each column will
@@ -17,9 +17,9 @@
  * systems:
  *
  *   <div class="o-grid">
- *     <div class="o-cell  o-cell--1of1  o-cell--1of3-desktop"></div>
- *     <div class="o-cell  o-cell--1of2  o-cell--1of3-desktop"></div>
- *     <div class="o-cell  o-cell--1of2  o-cell--1of3-desktop"></div>
+ *     <div class="o-cell  o-cell--1/1  o-cell--1/3@desktop"></div>
+ *     <div class="o-cell  o-cell--1/2  o-cell--1/3@desktop"></div>
+ *     <div class="o-cell  o-cell--1/2  o-cell--1/3@desktop"></div>
  *   </div>
  *
  * The above will create a system in which the first item will be 100% width
@@ -44,7 +44,7 @@
  * Grid works pretty well with auto margin applied to cells:
  *
  *   <div class="o-grid">
- *     <div class="o-cell  o-cell--1of4  u-margin-left--auto"></div>
+ *     <div class="o-cell  o-cell--1/4  u-margin-left--auto"></div>
  *   </div>
  *
  * This will place cell at the end of X axis. More information about aligning
@@ -63,17 +63,17 @@
 // How many columns would you like in your grid system? Depending on this
 // number, suit of fraction classes will be generated, e.g.:
 //
-//   .o-cell--1of2
-//   .o-cell--6of10
-//   .o-cell--5of12
+//   .o-cell--1/2
+//   .o-cell--6/10
+//   .o-cell--5/12
 
 $grid-max-columns = 12
 
 
 // This defines the delimiter for the fractions suffix in the class name:
-// `1of2`, `4of5`, etc.
+// `1/2`, `4/5`, etc.
 
-$widths-delimiter = 'of'
+$widths-delimiter = '\/'
 
 
 // Define the default gap between cells.
@@ -187,7 +187,7 @@ widths($columns, $breakpoint-name = null)
 
         $cell-width = percentage($numerator / $denominator)
 
-        // Build a class in the format `.o-cell--3of4-[breakpoint]`.
+        // Build a class in the format `.o-cell--3/4@[breakpoint]`.
         .o-cell--{$numerator}{$widths-delimiter}{$denominator}{$breakpoint-name}
           width s('calc(%s - %s)', $cell-width, ($grid-gap * 2))
 
@@ -206,7 +206,7 @@ widths($columns, $breakpoint-name = null)
  * The following will generate cells widths classes based on the value defined
  * in the `$grid-max-columns` variable, e.g.:
  *
- *   .o-cell--1of8
+ *   .o-cell--1/8
  */
 
 widths($grid-max-columns)
@@ -217,7 +217,7 @@ widths($grid-max-columns)
  * generate grid system for each of them and give them a responsive suffix,
  * e.g.:
  *
- *   .o-cell--3of12-desktop
+ *   .o-cell--3/12@desktop
  */
 
 if $breakpoints

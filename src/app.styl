@@ -5,7 +5,7 @@
 /*
  * Breeze.css, by @antonskyba
  * Better way to write CSS
- *
+ * 
  * github.com/antonskyba/Breeze.css
  */
 
@@ -13,86 +13,14 @@
 
 
 
-/* Contents
- * ========================================================================== */
-
-/*
- * CONFIG
- * Config...............Project-level configuration and feature switches.
- * Ratios...............Ratios that can be used to produce spacing values.
- * Base.................Most important setup variables, such as Base Unit and
- *                      Base Ratio.
- * Breakpoint...........Breakpoints at which layout changes adapting to
- *                      different screen sizes.
- * Palette..............Material Design color palette.
- * Color................Project's color assignments.
- * Font.................Font declarations & settings.
- * Animation............Custom animation timing functions, ported from Axis.
- * Other................Miscellaneous project-wide variables.
- *
- * FUNCTIONS
- * Accessibility........Functions that control content's accessibility.
- * Button...............Buttons tools.
- * Form.................Form tools.
- * Type.................Type tools.
- * Border...............Border/border radius tools.
- * Outline..............Outline tools.
- *
- * GENERIC
- * Box-sizing...........Slightly better box-sizing practice.
- * Normalize............Normalize.css from Necolas.
- * Reset................Simple reset that complements Normalize.css.
- * Shared...............Shared declarations for certain elements.
- *
- * HTML-TAGS
- * Page.................Base styles for page-level elements.
- * Type.................Default styles for text elements: headings, link, etc.
- * Button...............Default button styles.
- * Form.................Base form styles (for <input>, <textarea>, etc).
- * Image................Base image styles.
- * Table................Base table styles.
- *
- * OBJECTS
- * Block................Simple block object with consistent bottom gap.
- * Grid.................Grid module.
- * Wrapper..............Page constraint object.
- *
- * UI-COMPONENTS
- * Button...............An example button component, and how it fits into the
- *                      Breeze framework.
- *
- * UTILITIES
- * Accessibility........Helper classes that control content's accessibility.
- * Box-model............Utility classes to put box-model values onto elements.
- * Flexbox..............Helper classes to set and control Flexbox container.
- * Type.................Text & font helper classes.
- * Position.............Position helper classes.
- * Print................Print styles that optimize the printing process and make
- *                      the printed pages easier to read.
- * Debug................Styles to make debugging easier.
- */
-
-
-
-
-
-$css-path = '/'
-
 // Config
 // =============================================================================
 
 // Global settings files that contain project-wide variables; things that need
 // to be made available to the entire codebase.
 
-@import $css-path + 'config/_config.config'
-@import $css-path + 'config/_ratios.config'
-@import $css-path + 'config/_base.config'
-@import $css-path + 'config/_breakpoint.config'
-@import $css-path + 'config/_palette.config'
-@import $css-path + 'config/_color.config'
-@import $css-path + 'config/_font.config'
-@import $css-path + 'config/_animation.config'
-@import $css-path + 'config/_other.config'
+// <-- Add import of Rupture here. -->
+@import './config'
 
 
 
@@ -103,12 +31,7 @@ $css-path = '/'
 
 // Globally used functions and mixins.
 
-@import $css-path + 'functions/_accessibility.functions'
-@import $css-path + 'functions/_button.functions'
-@import $css-path + 'functions/_form.functions'
-@import $css-path + 'functions/_type.functions'
-@import $css-path + 'functions/_border.functions'
-@import $css-path + 'functions/_outline.functions'
+@import './functions'
 
 
 
@@ -122,10 +45,8 @@ $css-path = '/'
  * definition, etc. This is the first layer which generates actual CSS.
  */
 
-@import $css-path + 'generic/box-sizing.generic'
-@import $css-path + 'generic/normalize.generic'
-@import $css-path + 'generic/reset.generic'
-@import $css-path + 'generic/shared.generic'
+// <-- Add import of Normalize.css here (optionally). -->
+@import './generic'
 
 
 
@@ -139,12 +60,7 @@ $css-path = '/'
  * default styling from the browser so we can redefine them there.
  */
 
-@import $css-path + 'html-tags/page.html-tags'
-@import $css-path + 'html-tags/type.html-tags'
-@import $css-path + 'html-tags/button.html-tags'
-@import $css-path + 'html-tags/form.html-tags'
-@import $css-path + 'html-tags/image.html-tags'
-@import $css-path + 'html-tags/table.html-tags'
+@import './html-tags'
 
 
 
@@ -158,9 +74,7 @@ $css-path = '/'
  * patterns.
  */
 
-@import $css-path + 'objects/block.objects'
-@import $css-path + 'objects/grid.objects'
-@import $css-path + 'objects/wrapper.objects'
+@import './objects'
 
 
 
@@ -174,7 +88,7 @@ $css-path = '/'
  * components/chunks of UI are injected.
  */
 
-@import $css-path + 'ui-components/example.button.ui-components'
+@import './ui-components'
 
 
 
@@ -188,10 +102,4 @@ $css-path = '/'
  * before.
  */
 
-@import $css-path + 'utilities/accessibility.utilities'
-@import $css-path + 'utilities/box-model.utilities'
-@import $css-path + 'utilities/flexbox.utilities'
-@import $css-path + 'utilities/type.utilities'
-@import $css-path + 'utilities/position.utilities'
-@import $css-path + 'utilities/print.utilities'
-@import $css-path + 'utilities/debug.utilities'
+@import './utilities'
