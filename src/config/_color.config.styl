@@ -18,23 +18,23 @@
 //   pre
 //     color navy
 
-navy    = palette(Indigo, '900')
-blue    = palette(Blue)
-aqua    = palette('Light Blue', '200')
-teal    = palette(Cyan, '300')
-olive   = palette(Teal)
-green   = palette(Green)
-lime    = palette(Green, 'A400')
-yellow  = palette(Yellow, '600')
-orange  = palette(Orange)
-red     = palette(Red, '600')
-maroon  = palette(Pink, '900')
-fuchsia = palette(Purple, 'A400')
-purple  = palette(Purple)
-white   = palette(White)
-silver  = palette(Grey, '300')
-grey    = palette(Grey)
-black   = palette(Black)
+navy    ?= palette(Indigo, '900')
+blue    ?= palette(Blue)
+aqua    ?= palette('Light Blue', '200')
+teal    ?= palette(Cyan, '300')
+olive   ?= palette(Teal)
+green   ?= palette(Green)
+lime    ?= palette(Green, 'A400')
+yellow  ?= palette(Yellow, '600')
+orange  ?= palette(Orange)
+red     ?= palette(Red, '600')
+maroon  ?= palette(Pink, '900')
+fuchsia ?= palette(Purple, 'A400')
+purple  ?= palette(Purple)
+white   ?= palette(White)
+silver  ?= palette(Grey, '300')
+grey    ?= palette(Grey)
+black   ?= palette(Black)
 
 
 
@@ -49,8 +49,8 @@ black   = palette(Black)
 //    complementary or analogous to the primary color, but it should not simply
 //    be a light or dark variation of the primary color.
 
-$color-primary = palette(Indigo) // [1]
-$color-accent  = palette(Pink, 'A200') // [2]
+$color-primary ?= palette(Indigo) // [1]
+$color-accent  ?= palette(Pink, 'A200') // [2]
 
 
 
@@ -62,29 +62,29 @@ $color-accent  = palette(Pink, 'A200') // [2]
 // Different percentages of white and black added to the brand colors to fill
 // out the range of color palette.
 
-$tint-grades       = 25% 50% 75%
+$tint-grades       ?= 25% 50% 75%
 
 
 // Primary color tints.
 
-$color-primary-l25 = mix(white, $color-primary, $tint-grades[0])
-$color-primary-l50 = mix(white, $color-primary, $tint-grades[1])
-$color-primary-l75 = mix(white, $color-primary, $tint-grades[2])
+$color-primary-l25 ?= mix(white, $color-primary, $tint-grades[0])
+$color-primary-l50 ?= mix(white, $color-primary, $tint-grades[1])
+$color-primary-l75 ?= mix(white, $color-primary, $tint-grades[2])
 
-$color-primary-d25 = mix(black, $color-primary, $tint-grades[0])
-$color-primary-d50 = mix(black, $color-primary, $tint-grades[1])
-$color-primary-d75 = mix(black, $color-primary, $tint-grades[2])
+$color-primary-d25 ?= mix(black, $color-primary, $tint-grades[0])
+$color-primary-d50 ?= mix(black, $color-primary, $tint-grades[1])
+$color-primary-d75 ?= mix(black, $color-primary, $tint-grades[2])
 
 
 // Accent color tints.
 
-$color-accent-l25  = mix(white, $color-accent, $tint-grades[0])
-$color-accent-l50  = mix(white, $color-accent, $tint-grades[1])
-$color-accent-l75  = mix(white, $color-accent, $tint-grades[2])
+$color-accent-l25  ?= mix(white, $color-accent, $tint-grades[0])
+$color-accent-l50  ?= mix(white, $color-accent, $tint-grades[1])
+$color-accent-l75  ?= mix(white, $color-accent, $tint-grades[2])
 
-$color-accent-d25  = mix(black, $color-accent, $tint-grades[0])
-$color-accent-d50  = mix(black, $color-accent, $tint-grades[1])
-$color-accent-d75  = mix(black, $color-accent, $tint-grades[2])
+$color-accent-d25  ?= mix(black, $color-accent, $tint-grades[0])
+$color-accent-d50  ?= mix(black, $color-accent, $tint-grades[1])
+$color-accent-d75  ?= mix(black, $color-accent, $tint-grades[2])
 
 
 
@@ -93,11 +93,11 @@ $color-accent-d75  = mix(black, $color-accent, $tint-grades[2])
 // State Colors
 // =============================================================================
 
-$color-success  = green // [3]
-$color-warning  = palette(Yellow, '700') // [3]
-$color-danger   = red // [3]
-$color-hint     = palette(Black, 'Hint Text')
-$color-disabled = palette(Black, 'Disabled Text')
+$color-success  ?= green // [3]
+$color-warning  ?= palette(Yellow, '700') // [3]
+$color-danger   ?= red // [3]
+$color-hint     ?= palette(Black, 'Hint Text')
+$color-disabled ?= palette(Black, 'Disabled Text')
 
 
 
@@ -108,8 +108,8 @@ $color-disabled = palette(Black, 'Disabled Text')
 
 // 1. Used in `text-selection()` tool to set the text highlight color.
 
-$body-color                 = palette(Black, 'Text')
-$link-color                 = $color-accent
-$highlight-bg-color         = palette(Grey, '500') // [1]
-$placeholder-color          = mix($color-hint, white, 80%)
-$placeholder-disabled-color = $placeholder-color
+$body-color                 ?= palette(Black, 'Text')
+$link-color                 ?= $color-accent
+$highlight-bg-color         ?= palette(Grey, '500') // [1]
+$placeholder-color          ?= mix($color-hint, white, 80%)
+$placeholder-disabled-color ?= $placeholder-color

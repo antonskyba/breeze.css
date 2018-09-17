@@ -9,9 +9,9 @@
 // A map of global config settings. Define any project-level configuration,
 // feature switches, etc. in here.
 
-$environments = 'dev' 'production'
+$environments ?= 'dev' 'production'
 
-$config = {
+$config ?= {
   'env':   $environments[0],
   'debug': false
 }

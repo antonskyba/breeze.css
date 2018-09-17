@@ -11,9 +11,9 @@
 // 2. Standard `border-radius` to use in button/input/etc styles.
 // 3. Consistent `margin-bottom` for block elements.
 
-$global-duration     = .2s // [1]
-$global-radius       = .2rem // [2]
-$block-margin-bottom = $unit // [3]
+$global-duration     ?= .2s // [1]
+$global-radius       ?= .2rem // [2]
+$block-margin-bottom ?= $unit // [3]
 
 
 
@@ -22,8 +22,8 @@ $block-margin-bottom = $unit // [3]
 // Z-index Master List
 // =============================================================================
 
-$z-index-dropdown         = 1000
-$z-index-tooltip          = 1020
-$z-index-navbar           = 1040
-$z-index-modal-background = 1060
-$z-index-toast            = 1080
+$z-index-dropdown         ?= 1000
+$z-index-tooltip          ?= 1020
+$z-index-navbar           ?= 1040
+$z-index-modal-background ?= 1060
+$z-index-toast            ?= 1080
