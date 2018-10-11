@@ -44,19 +44,7 @@ h5
 
 
 /*
- * 1. Offset link from surrounding text.
- * 2. Remove link's underline.
- */
-
-a
-  font-weight bold /* [1] */
-  color $link-color /* [1] */
-  text-decoration none /* [2] */
-
-
-/*
  * 1. Apply default monospace font to <pre> and phrase elements.
- * 2. Make text size is 0.85x of surrounding text — optimal for code elements.
  */
 
 pre,
@@ -64,7 +52,7 @@ code,
 kbd,
 samp
   font-family $font-family-monospace /* [1] */
-  font-size .85em /* [2] */
+  font-size $unit-em-sm
 
 
 /*
@@ -76,4 +64,4 @@ sup,
 sub,
 small,
 figcaption
-  font-size (1em / $base-ratio)
+  font-size $unit-em-sm

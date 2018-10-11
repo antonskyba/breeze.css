@@ -1,0 +1,37 @@
+/* ==========================================================================
+   INPUT
+   ========================================================================== */
+
+/*
+ * This is an example component. Extend styles by building your own components
+ * that make up your UI.
+ *
+ * Note that component classes are prefixed with a `c-`. More info:
+ * https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces.
+ */
+
+
+
+.c-input
+  padding $form-control-padding-y $form-control-padding-x
+  border $form-control-border
+  border-radius $form-control-border-radius
+  font-size $form-control-font-size
+  color $form-control-color
+  background $form-control-bg-color
+
+  placeholder($form-control-placeholder-color, $form-control-disabled-placeholder-color)
+
+
+
+
+
+/* States
+   ========================================================================== */
+
+.c-input
+
+  &[disabled]
+    border $form-control-disabled-border
+    color $form-control-disabled-color
+    background $form-control-disabled-bg-color

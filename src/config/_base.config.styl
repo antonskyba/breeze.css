@@ -51,11 +51,16 @@ $base-ratio ?= $perfect-fourth // [2]
 //   — from 1 to 2:       1 1.125 1.25 1.5 1.75;
 //   — Fibonacci numbers: 1 2 5 8 13.
 
-$multipliers ?= 1 2 3 4 5
+$multipliers ?= 1 2 3 4 5 6 7 8 9 10
 
 
 // Modular Scale [em]
 
+$unit-em-9x  ?= round(1em * ($base-ratio ** $multipliers[9]), 3) // 17.713em
+$unit-em-8x  ?= round(1em * ($base-ratio ** $multipliers[8]), 3) // 13.288em
+$unit-em-7x  ?= round(1em * ($base-ratio ** $multipliers[7]), 3) // 9.969em
+$unit-em-6x  ?= round(1em * ($base-ratio ** $multipliers[6]), 3) // 7.478em
+$unit-em-5x  ?= round(1em * ($base-ratio ** $multipliers[5]), 3) // 5.610em
 $unit-em-4x  ?= round(1em * ($base-ratio ** $multipliers[4]), 3) // 4.209em
 $unit-em-3x  ?= round(1em * ($base-ratio ** $multipliers[3]), 3) // 3.157em
 $unit-em-2x  ?= round(1em * ($base-ratio ** $multipliers[2]), 3) // 2.369em
@@ -69,6 +74,11 @@ $unit-em-xs  ?= round(1em / ($base-ratio ** $multipliers[1]), 3) // 0.563em
 $unit-em-2s  ?= round(1em / ($base-ratio ** $multipliers[2]), 3) // 0.422em
 $unit-em-3s  ?= round(1em / ($base-ratio ** $multipliers[3]), 3) // 0.317em
 $unit-em-4s  ?= round(1em / ($base-ratio ** $multipliers[4]), 3) // 0.238em
+$unit-em-5s  ?= round(1em / ($base-ratio ** $multipliers[5]), 3) // 0.178em
+$unit-em-6s  ?= round(1em / ($base-ratio ** $multipliers[6]), 3) // 0.134em
+$unit-em-7s  ?= round(1em / ($base-ratio ** $multipliers[7]), 3) // 0.100em
+$unit-em-8s  ?= round(1em / ($base-ratio ** $multipliers[8]), 3) // 0.075em
+$unit-em-9s  ?= round(1em / ($base-ratio ** $multipliers[9]), 3) // 0.056em
 
 
 // Convert Base Unit value to `rem`. This will be multiplied by each unit value
@@ -79,6 +89,11 @@ $unit        ?= unit($base-unit / 10, 'rem')
 
 // Modular Scale [rem]
 
+$unit-9x     ?= round($unit * $unit-em-9x, 1) // 28.3rem
+$unit-8x     ?= round($unit * $unit-em-8x, 1) // 21.3rem
+$unit-7x     ?= round($unit * $unit-em-7x, 1) // 16.0rem
+$unit-6x     ?= round($unit * $unit-em-6x, 1) // 12.0rem
+$unit-5x     ?= round($unit * $unit-em-5x, 1) // 9.0rem
 $unit-4x     ?= round($unit * $unit-em-4x, 1) // 6.7rem
 $unit-3x     ?= round($unit * $unit-em-3x, 1) // 5.1rem
 $unit-2x     ?= round($unit * $unit-em-2x, 1) // 3.8rem
@@ -90,3 +105,8 @@ $unit-xs     ?= round($unit * $unit-em-xs, 1) // 0.9rem
 $unit-2s     ?= round($unit * $unit-em-2s, 1) // 0.7rem
 $unit-3s     ?= round($unit * $unit-em-3s, 1) // 0.5rem
 $unit-4s     ?= round($unit * $unit-em-4s, 1) // 0.4rem
+$unit-5s     ?= round($unit * $unit-em-5s, 1) // 0.3rem
+$unit-6s     ?= round($unit * $unit-em-6s, 1) // 0.2rem
+$unit-7s     ?= round($unit * $unit-em-7s, 1) // 0.2rem
+$unit-8s     ?= round($unit * $unit-em-8s, 1) // 0.1rem
+$unit-9s     ?= round($unit * $unit-em-9s, 1) // 0.1rem

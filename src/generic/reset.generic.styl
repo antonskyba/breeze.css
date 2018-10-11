@@ -11,18 +11,19 @@
 /*
  * Set outline styles.
  *
- * There are a number of alternative methods to style elements that are in
- * focus:
+ * There are a number of methods to style elements in focus:
  *
- *   a) give it a background colour;
+ *   a) give them a background colour;
  *   b) change the text colour (make it high contrast for blind people);
  *   c) provide a custom outline.
  *
  * Further reading: www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/F78.
+ *
+ * 1. Temporary remove outline.
  */
 
 :focus
-  outline-styles()
+  outline none /* [1] */
 
 
 /*

@@ -9,20 +9,15 @@
 
 
 /*
- * Set color to placeholder.
+ * 1. Avoid <input> line break in Safari.
+ * 2. Truncate text to the width of <input> field using ellipsis.
  */
 
-input,
-textarea
-  placeholder($placeholder-color, $placeholder-disabled-color)
+input
+  word-break normal /* [1] */
 
-
-/*
- * Truncate text to the width of <input> field using ellipsis.
- */
-
-input[placeholder]
-  text-overflow ellipsis
+  &[placeholder]
+    text-overflow ellipsis /* [2] */
 
 
 /*

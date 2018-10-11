@@ -12,7 +12,7 @@
  * 1. Allow us to style box model properties.
  * 2. Line different sized buttons up a little nicer.
  * 3. Truncate text to the width of button using ellipsis.
- * 4. Force all buttons to appear clickable.
+ * 4. Prevent text selecting on fast clicking.
  */
 
 button,
@@ -25,11 +25,4 @@ button,
   overflow hidden /* [3] */
   text-overflow ellipsis /* [3] */
   text-align center
-  cursor pointer /* [4] */
-  user-select none
-  
-  &,
-  &:hover,
-  &:active,
-  &:focus
-    text-decoration none
+  user-select none /* [4] */
