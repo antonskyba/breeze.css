@@ -50,10 +50,10 @@ Follow this convention in your own code as well to keep a consistent naming conv
 
 If you want to dive deeper into namespacing classes and want to know why this is a great idea, have a look at [this article](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/).
 
-## Dependencies
-
-Breeze uses [Rupture](https://github.com/jescalan/rupture) as for managing with breakpoints.
-
 ## Installation
 
 `npm install breeze.css`
+
+## Dependencies
+
+Breeze uses [Rupture](https://github.com/jescalan/rupture) as for managing with breakpoints.
