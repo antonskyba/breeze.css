@@ -56,4 +56,4 @@ If you want to dive deeper into namespacing classes and want to know why this is
 
 ## Dependencies
 
-Breeze uses [Rupture](https://github.com/jescalan/rupture) as for managing with breakpoints.
+Breeze.css uses [Rupture](https://github.com/jescalan/rupture) for managing with breakpoints.
