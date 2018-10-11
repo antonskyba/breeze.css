@@ -46,22 +46,14 @@ All classes in Breeze has specific prefixes which explicitly tell you what layer
   - `.c-`: ui-components
   - `.u-`: utilities
 
-Be sure to follow this convention in your own code as well to keep a consistent naming convention across your code base. 
+Follow this convention in your own code as well to keep a consistent naming convention across your code base. 
 
 If you want to dive deeper into namespacing classes and want to know why this is a great idea, have a look at [this article](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/).
 
-## Responsive
+## Dependencies
 
-Breeze comes with responsive functionality for some modules and uses [Rupture](https://github.com/jescalan/rupture) as a main tool for providing that.
+Breeze uses [Rupture](https://github.com/jescalan/rupture) as for managing with breakpoints.
 
 ## Installation
 
-Breeze is not available on Npm or Bower, therefore you have to download the source folder and put it into your project's styles folder.
-
-## Getting started
-
-1. Open `main.styl` and find the `$css-path` variable. By default style files are located together with `main.styl`, but in case if you want to keep them separately assign to this variable your custom path.
-
-2. Open `_base.config.styl` and choose your Base Unit and Base Ratio values. You will find a brief description of each of these units and few useful links that may help you to make a choice.
-
-> **Note:** Breeze uses most recent version of Normalize.css that is available during the latest major framework update, but if you want to get Normalize updates through Bower or Npm delete `normalize.generic.styl`, add Normalize.css as a dependency to your project and import it to the `main.styl`.
+`npm install breeze.css`

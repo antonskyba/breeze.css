@@ -1,0 +1,24 @@
+{
+  "name": "breeze.css",
+  "version": "2.0.0",
+  "description": "Lightweight, scalable, Stylus-based framework for medium and large web projects",
+  "main": "main.styl",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonskyba/Breeze.css.git"
+  },
+  "keywords": [
+    "css",
+    "stylus",
+    "framework"
+  ],
+  "author": "Anton Skyba <“inbox@antonskyba.me”>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antonskyba/Breeze.css/issues"
+  },
+  "homepage": "https://github.com/antonskyba/Breeze.css#readme"
+}
