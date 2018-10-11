@@ -13,13 +13,14 @@
 
 // Example usage:
 // 
-// border-triangle('top', 1rem, black)
+//   border-triangle('top', 1rem, black)
 
 border-triangle($side, $size, $color)
   width 0
   height 0
 
   for $border-side in 'left' 'right' 'top' 'bottom'
+    
     if $border-side != $side
       border-{$border-side} $size solid transparent
       
@@ -32,21 +33,21 @@ border-triangle($side, $size, $color)
 // Single Side Border Radius
 // =============================================================================
 
-border-top-radius($radius)
+border-top-radius($radius = $global-radius)
   border-top-right-radius $radius
   border-top-left-radius $radius
 
 
-border-right-radius($radius)
+border-right-radius($radius = $global-radius)
   border-bottom-right-radius $radius
   border-top-right-radius $radius
 
 
-border-bottom-radius($radius)
+border-bottom-radius($radius = $global-radius)
   border-bottom-right-radius $radius
   border-bottom-left-radius $radius
 
 
-border-left-radius($radius)
+border-left-radius($radius = $global-radius)
   border-bottom-left-radius $radius
   border-top-left-radius $radius

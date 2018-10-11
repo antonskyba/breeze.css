@@ -67,18 +67,18 @@
 //   .o-cell--6/10
 //   .o-cell--5/12
 
-$grid-max-columns = 12
+$grid-max-columns      ?= 12
 
 
 // This defines the delimiter for the fractions suffix in the class name:
 // `1/2`, `4/5`, etc.
 
-$widths-delimiter = '\/'
+$grid-widths-delimiter ?= '\/'
 
 
 // Define the default gap between cells.
 
-$grid-gap         = $unit-xs
+$grid-gap              ?= $unit-xs
 
 
 
@@ -188,7 +188,7 @@ widths($columns, $breakpoint-name = null)
         $cell-width = percentage($numerator / $denominator)
 
         // Build a class in the format `.o-cell--3/4@[breakpoint]`.
-        .o-cell--{$numerator}{$widths-delimiter}{$denominator}{$breakpoint-name}
+        .o-cell--{$numerator}{$grid-widths-delimiter}{$denominator}{$breakpoint-name}
           width s('calc(%s - %s)', $cell-width, ($grid-gap * 2))
 
           // Define full-width cells in grid with the `flush` modifier.
