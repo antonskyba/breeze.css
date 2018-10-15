@@ -1,6 +1,6 @@
 {
   "name": "breeze.css",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Lightweight, scalable, Stylus-based framework for medium and large web projects",
   "main": "main.styl",
   "scripts": {
