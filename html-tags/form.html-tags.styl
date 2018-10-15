@@ -15,19 +15,11 @@
 
 input
   word-break normal /* [1] */
+  text-overflow ellipsis /* [2] */
+  overflow hidden /* [2] */
 
   &[placeholder]
     text-overflow ellipsis /* [2] */
-
-
-/*
- * Truncate text to the width of field using ellipsis.
- */
-
-input,
-textarea
-  text-overflow ellipsis
-  overflow hidden
 
 
 /*
